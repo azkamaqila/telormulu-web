@@ -11,7 +11,7 @@ import {ai} from '@/ai/genkit';
 import {z} from 'genkit';
 
 const GenerateEggRecipeInputSchema = z.object({
-  eggsCount: z.number().int().min(1).describe('The number of eggs available.'),
+  eggsCount: z.number().int().min(1).max(10).describe('The number of eggs available.'),
   mainIngredients: z.array(z.string()).describe('A list of common boarding house ingredients available.'),
   additionalIngredients: z
     .string()

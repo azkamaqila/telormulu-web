@@ -129,7 +129,7 @@ export default function TelorMuluApp() {
 
           {/* Section 1: Eggs Count */}
           <div className="space-y-4">
-            <Label className="text-lg font-bold">1. Telur yang dimiliki</Label>
+            <Label className="text-lg font-bold">1. Telur yang dimiliki (Maksimal 10)</Label>
             <div className="flex items-center gap-6 bg-secondary/10 p-4 rounded-2xl border-2 border-dashed border-primary">
               <Button 
                 variant="outline" 
@@ -146,7 +146,7 @@ export default function TelorMuluApp() {
               <Button 
                 variant="outline" 
                 size="icon" 
-                onClick={() => setEggsCount(eggsCount + 1)}
+                onClick={() => setEggsCount(Math.min(10, eggsCount + 1))}
                 className="rounded-full border-primary text-primary hover:bg-primary hover:text-white"
               >
                 <Plus className="w-5 h-5" />
