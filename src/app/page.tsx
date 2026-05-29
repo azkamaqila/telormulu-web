@@ -173,7 +173,7 @@ export default function TelorMuluApp() {
                 onClick={(e) => { e.stopPropagation(); setEggsCount(Math.max(1, eggsCount - 1)); }}
                 className="rounded-full border-primary text-primary hover:bg-primary hover:text-white"
               >
-                <在高 Minus className="w-5 h-5" />
+                <Minus className="w-5 h-5" />
               </Button>
               <div className="text-center min-w-[100px]">
                 <span className="text-4xl font-bold">{eggsCount}</span>
@@ -260,9 +260,13 @@ export default function TelorMuluApp() {
     if (!selectedRecipe) return null;
     const isGenerated = !('id' in selectedRecipe);
     const videoUrl = getYouTubeLink(selectedRecipe.title);
+    
+    const ingredients = 'ingredients' in selectedRecipe 
+      ? selectedRecipe.ingredients 
+      : (selectedRecipe as GenerateEggRecipeOutput).ingredientsList || [];
 
     return (
-      <div className="max-w-3xl mx-auto p-6 space-y-8 animate-in fade-in zoom-in-95 duration-500">
+      <div className="max-w-5xl mx-auto p-6 space-y-8 animate-in fade-in zoom-in-95 duration-500">
         <Button 
           variant="outline"
           onClick={() => setPage(isGenerated ? "masak_sendiri" : "home")}
@@ -271,58 +275,71 @@ export default function TelorMuluApp() {
           <ArrowLeft className="w-4 h-4" /> Kembali
         </Button>
 
-        <div className="space-y-6">
-          <h1 className="text-4xl font-extrabold text-primary leading-tight">{selectedRecipe.title}</h1>
-          
-          <div className="bg-white border-2 border-primary rounded-3xl p-6 shadow-xl flex items-center justify-center gap-4">
-            <span className="text-sm font-bold uppercase tracking-wider text-primary/60">Amunisi:</span>
-            <span className="text-3xl tracking-[0.5em]">{selectedRecipe.ingredientsSummary}</span>
-          </div>
+        <h1 className="text-4xl font-extrabold text-primary leading-tight text-center md:text-left">{selectedRecipe.title}</h1>
 
-          <Card className="border-2 border-primary bg-white">
-            <div className="border-b-2 border-primary/10 p-6">
-              <h2 className="flex items-center gap-2 text-primary font-bold text-xl">
-                <ChefHat className="w-6 h-6" /> Tutorial Langkah Demi Langkah
+        <Card className="border-2 border-primary bg-white shadow-2xl overflow-hidden">
+          <CardContent className="p-0 flex flex-col md:flex-row divide-y md:divide-y-0 md:divide-x divide-primary/20">
+            {/* Left Column: Ingredients (less than half) */}
+            <div className="md:w-[35%] p-8 bg-secondary/5">
+              <h2 className="text-2xl font-bold text-primary mb-6 flex items-center gap-2 underline decoration-secondary">
+                Bahan-bahan
               </h2>
+              <ul className="space-y-4">
+                {ingredients.map((item, i) => (
+                  <li key={i} className="text-lg font-medium text-black/80 flex items-start gap-3">
+                    <span className="w-2 h-2 rounded-full bg-primary mt-2.5 flex-shrink-0" />
+                    {item}
+                  </li>
+                ))}
+                {ingredients.length === 0 && (
+                  <li className="text-muted-foreground italic">Lihat rangkuman amunisi di langkah-langkah.</li>
+                )}
+              </ul>
             </div>
-            <CardContent className="p-8">
-              <div className="recipe-markdown text-lg text-primary/90">
+
+            {/* Right Column: Steps (more than half) */}
+            <div className="flex-1 p-8">
+              <h2 className="text-2xl font-bold text-primary mb-6 flex items-center gap-2">
+                <ChefHat className="w-6 h-6" /> Cara Masak
+              </h2>
+              <div className="recipe-markdown text-lg leading-relaxed text-black/90">
                 {selectedRecipe.stepsMarkdown.split('\n').map((line, i) => (
-                  <p key={i}>{line}</p>
+                  <p key={i} className={line.trim() === "" ? "h-2" : ""}>{line}</p>
                 ))}
               </div>
-            </CardContent>
-          </Card>
-
-          <div className="space-y-4">
-            <h3 className="text-xl font-bold text-primary flex items-center gap-2">
-              <Youtube className="w-6 h-6 text-red-600" /> Referensi Visual (Biar Gak Gagal)
-            </h3>
-            <div className="aspect-video w-full rounded-3xl overflow-hidden border-4 border-primary shadow-2xl">
-              <iframe 
-                width="100%" 
-                height="100%" 
-                src={videoUrl} 
-                title="YouTube video player" 
-                frameBorder="0" 
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
-                allowFullScreen
-              ></iframe>
             </div>
-          </div>
+          </CardContent>
+        </Card>
 
-          <div className="flex justify-center pt-8">
-            <Button 
-              onClick={() => {
-                setSelectedRecipe(null);
-                setPage("home");
-              }}
-              variant="outline"
-              className="border-2 border-primary text-primary font-bold px-12 py-6 rounded-full"
-            >
-              Udah Kenyang? Balik Home
-            </Button>
+        {/* Video Section (Outside the box) */}
+        <div className="space-y-4 pt-4">
+          <h3 className="text-xl font-bold text-primary flex items-center gap-2 justify-center md:justify-start">
+            <Youtube className="w-6 h-6 text-red-600" /> Referensi Visual (Biar Gak Gagal)
+          </h3>
+          <div className="aspect-video w-full rounded-3xl overflow-hidden border-4 border-primary shadow-2xl bg-black">
+            <iframe 
+              width="100%" 
+              height="100%" 
+              src={videoUrl} 
+              title="YouTube video player" 
+              frameBorder="0" 
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+              allowFullScreen
+            ></iframe>
           </div>
+        </div>
+
+        <div className="flex justify-center pt-8">
+          <Button 
+            onClick={() => {
+              setSelectedRecipe(null);
+              setPage("home");
+            }}
+            variant="outline"
+            className="border-2 border-primary text-primary font-bold px-12 py-6 rounded-full hover:bg-primary hover:text-white transition-colors"
+          >
+            Udah Kenyang? Balik Home
+          </Button>
         </div>
       </div>
     );

@@ -23,6 +23,7 @@ export type GenerateEggRecipeInput = z.infer<typeof GenerateEggRecipeInputSchema
 
 const GenerateEggRecipeOutputSchema = z.object({
   title: z.string().describe('A creative, humorous, and Indonesian slang-filled title for the recipe.'),
+  ingredientsList: z.array(z.string()).describe('A plain list of ingredients used, without any emojis.'),
   ingredientsSummary: z.string().describe('A summary of ingredients used, presented with relevant emojis.'),
   stepsMarkdown: z
     .string()
@@ -50,9 +51,10 @@ Bahan Utama: {{#each mainIngredients}}{{{this}}}{{#unless @last}}, {{/unless}}{{
 Alat yang Dimiliki: {{#each cookingTools}}{{{this}}}{{#unless @last}}, {{/unless}}{{/each}}
 
 --- INSTRUCTIONS ---
-1.  **Title**: Create a recipe title that is catchy, humorous, and uses Indonesian slang relevant to the anak kos lifestyle. For example, "Telur Dadar Gulung Akhir Bulan" or "Telur Kecap Pontianak Estetik".
-2.  **Ingredients Summary**: List the main ingredients (including eggs and provided items) used in the recipe, summarized with appropriate emojis. For example, "🥚🥚🧅🌶️ kecap manis".
-3.  **Steps Markdown**: Provide step-by-step instructions in markdown format. Make these steps highly engaging, funny, and incorporate common Indonesian boarding-house slang and cultural references. Emphasize simplicity and resourcefulness. If the "Setrikaan (Nekat)" tool is selected, make the steps extra creative and humorous, hinting at desperation but still resulting in something edible.
+1.  **Title**: Create a recipe title that is catchy, humorous, and uses Indonesian slang relevant to the anak kos lifestyle.
+2.  **Ingredients List**: Provide a plain string array of the specific ingredients needed (e.g., ["2 butir telur", "Kecap manis", "1 siung bawang merah"]). DO NOT include emojis here.
+3.  **Ingredients Summary**: List the main ingredients used in the recipe, summarized with appropriate emojis. For example, "🥚🥚🧅🌶️ kecap manis".
+4.  **Steps Markdown**: Provide step-by-step instructions in markdown format. Make these steps highly engaging, funny, and incorporate common Indonesian boarding-house slang.
 
 Respond strictly in JSON format according to the output schema.`,
 });
