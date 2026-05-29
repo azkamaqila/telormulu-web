@@ -92,7 +92,7 @@ export default function TelorMuluApp() {
 
       <section className="space-y-4">
         <div className="flex items-center gap-2">
-          <Sparkles className="w-5 h-5 text-secondary" />
+          <span className="text-xl">🥚</span>
           <h2 className="text-xl font-bold text-primary">Masakan Telur Populer ✨</h2>
         </div>
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
