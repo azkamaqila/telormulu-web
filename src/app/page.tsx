@@ -94,7 +94,7 @@ export default function TelorMuluApp() {
 
       <section className="space-y-4">
         <div className="flex items-center gap-2">
-          <h2 className="text-xl font-bold text-primary">Ide Menu Telur Buat Kamu 🥚</h2>
+          <h2 className="text-xl font-bold text-primary">🥚 TOP 10 Masakan Telur Trending di Indonesia 🇮🇩</h2>
         </div>
         <div className="grid grid-cols-1 gap-6">
           {COMMUNITY_RECIPES.map((recipe) => (
