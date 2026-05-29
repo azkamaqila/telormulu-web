@@ -86,7 +86,7 @@ export default function TelorMuluApp() {
         </div>
         <Button 
           onClick={() => setPage("masak_sendiri")}
-          className="bg-white hover:bg-secondary/10 text-primary font-bold py-10 px-16 text-2xl rounded-full shadow-2xl border-4 border-primary transition-all hover:scale-110 active:scale-95"
+          className="bg-white hover:bg-secondary/10 text-primary font-bold py-6 px-10 text-xl rounded-full shadow-xl border-2 border-primary transition-all hover:scale-105 active:scale-95"
         >
           👨‍🍳&nbsp;&nbsp;Masak Sendiri
         </Button>
