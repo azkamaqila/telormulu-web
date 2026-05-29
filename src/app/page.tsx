@@ -129,6 +129,14 @@ export default function TelorMuluApp() {
                   </span>
                 </div>
               </CardContent>
+              <div className="bg-primary w-24 sm:w-32 flex flex-col items-center justify-center gap-1 p-2 flex-shrink-0">
+                <span className="text-white text-[10px] font-black uppercase tracking-tighter">Butuh:</span>
+                <div className="grid grid-cols-2 gap-1 items-center justify-center">
+                  {Array.from({ length: recipe.eggsCount }).map((_, i) => (
+                    <span key={i} className="text-xl sm:text-2xl drop-shadow-sm">🥚</span>
+                  ))}
+                </div>
+              </div>
             </Card>
           ))}
         </div>
@@ -146,12 +154,12 @@ export default function TelorMuluApp() {
       </button>
 
       <Card className="border-2 border-primary shadow-2xl bg-white overflow-hidden">
-        <CardHeader className="bg-primary text-white p-6">
-          <CardTitle className="text-2xl flex items-center gap-2 font-bold">
+        <div className="bg-primary text-white p-6">
+          <h2 className="text-2xl flex items-center gap-2 font-bold">
             <ChefHat className="w-8 h-8" /> Atur Strategi Masak
-          </CardTitle>
+          </h2>
           <p className="text-white/80 italic text-sm">Pilih senjata dan amunisi yang ada di kosan.</p>
-        </CardHeader>
+        </div>
         <CardContent className="p-8 space-y-8">
           {isSultan && <AntiSultanAlert />}
 
@@ -162,7 +170,7 @@ export default function TelorMuluApp() {
               <Button 
                 variant="outline" 
                 size="icon" 
-                onClick={() => setEggsCount(Math.max(1, eggsCount - 1))}
+                onClick={(e) => { e.stopPropagation(); setEggsCount(Math.max(1, eggsCount - 1)); }}
                 className="rounded-full border-primary text-primary hover:bg-primary hover:text-white"
               >
                 <Minus className="w-5 h-5" />
@@ -174,7 +182,7 @@ export default function TelorMuluApp() {
               <Button 
                 variant="outline" 
                 size="icon" 
-                onClick={() => setEggsCount(Math.min(10, eggsCount + 1))}
+                onClick={(e) => { e.stopPropagation(); setEggsCount(Math.min(10, eggsCount + 1)); }}
                 className="rounded-full border-primary text-primary hover:bg-primary hover:text-white"
               >
                 <Plus className="w-5 h-5" />
@@ -271,11 +279,11 @@ export default function TelorMuluApp() {
           </div>
 
           <Card className="border-2 border-primary bg-white">
-            <CardHeader className="border-b-2 border-primary/10">
-              <CardTitle className="flex items-center gap-2 text-primary">
+            <div className="border-b-2 border-primary/10 p-6">
+              <h2 className="flex items-center gap-2 text-primary font-bold text-xl">
                 <ChefHat className="w-6 h-6" /> Tutorial Langkah Demi Langkah
-              </CardTitle>
-            </CardHeader>
+              </h2>
+            </div>
             <CardContent className="p-8">
               <div className="recipe-markdown text-lg text-primary/90">
                 {selectedRecipe.stepsMarkdown.split('\n').map((line, i) => (
@@ -327,7 +335,3 @@ export default function TelorMuluApp() {
     </main>
   );
 }
-
-const CardHeader = ({ children, className }: { children: React.ReactNode, className?: string }) => (
-  <div className={`p-6 ${className}`}>{children}</div>
-);

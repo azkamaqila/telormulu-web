@@ -10,6 +10,7 @@ export interface StaticRecipe {
   chefName: string;
   chefAvatar: string;
   imageUrl: string;
+  eggsCount: number;
 }
 
 export const COMMUNITY_RECIPES: StaticRecipe[] = [
@@ -27,7 +28,8 @@ export const COMMUNITY_RECIPES: StaticRecipe[] = [
     servings: '2 orang',
     chefName: 'Chef Pasrah',
     chefAvatar: 'https://picsum.photos/seed/chef1/100/100',
-    imageUrl: 'https://picsum.photos/seed/egg1/400/300'
+    imageUrl: 'https://picsum.photos/seed/egg1/400/300',
+    eggsCount: 2
   },
   {
     id: 'kecap-pontianak',
@@ -43,7 +45,8 @@ export const COMMUNITY_RECIPES: StaticRecipe[] = [
     servings: '1 orang',
     chefName: 'Mami Kost',
     chefAvatar: 'https://picsum.photos/seed/chef2/100/100',
-    imageUrl: 'https://picsum.photos/seed/egg2/400/300'
+    imageUrl: 'https://picsum.photos/seed/egg2/400/300',
+    eggsCount: 2
   },
   {
     id: 'semur-pasrah',
@@ -52,14 +55,15 @@ export const COMMUNITY_RECIPES: StaticRecipe[] = [
     ingredientsSummary: '🥚🧂🥔 Air kran secukupnya',
     stepsMarkdown: `1. Rebus telur sampe keras sekeras hati mantan.
 2. Kupas kulitnya (hati-hati jangan sampe telurnya ikut kebuang).
-3. Masak air, kecap, garam, dan lada. Masukin telur rebus tadi.
+3. Masak air, kecap, garam, and lada. Masukin telur rebus tadi.
 4. Tunggu sampe airnya surut dan warnanya jadi cokelat estetik nan pasrah.`,
     videoUrl: 'https://www.youtube.com/embed/kYj6oN_fKTM',
     cookTime: '30 menit',
     servings: '4 orang',
     chefName: 'Mahasiswa Abadi',
     chefAvatar: 'https://picsum.photos/seed/chef3/100/100',
-    imageUrl: 'https://picsum.photos/seed/egg3/400/300'
+    imageUrl: 'https://picsum.photos/seed/egg3/400/300',
+    eggsCount: 4
   }
 ];
 
