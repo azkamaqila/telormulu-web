@@ -330,7 +330,7 @@ export default function TelorMuluApp() {
             {/* Right Column: Steps */}
             <div className="flex-1 p-8">
               <h2 className="text-2xl font-bold text-primary mb-6 flex items-center gap-2">
-                <ChefHat className="w-6 h-6" /> Cara Masak (Detail)
+                <ChefHat className="w-6 h-6" /> Cara Masak
               </h2>
               <div className="recipe-markdown text-lg leading-relaxed text-black/90">
                 {selectedRecipe.stepsMarkdown.split('\n').map((line, i) => (
