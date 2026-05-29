@@ -2,16 +2,18 @@
 
 import { useState } from "react";
 import { Button } from "@/components/ui/button";
-import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
+import { Card, CardContent } from "@/components/ui/card";
 import { Checkbox } from "@/components/ui/checkbox";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { RadioGroup, RadioGroupItem } from "@/components/ui/radio-group";
-import { Plus, Minus, ChefHat, ArrowLeft, Youtube, Sparkles, Loader2 } from "lucide-react";
+import { Plus, Minus, ChefHat, ArrowLeft, Youtube, Sparkles, Loader2, Clock, Users, Bookmark } from "lucide-react";
 import { COMMUNITY_RECIPES, type StaticRecipe, getYouTubeLink } from "@/lib/recipes-data";
 import { AntiSultanAlert } from "@/components/AntiSultanAlert";
 import { generateEggRecipe, type GenerateEggRecipeOutput } from "@/ai/flows/generate-egg-recipe";
 import { useToast } from "@/hooks/use-toast";
+import Image from "next/image";
+import { Avatar, AvatarImage, AvatarFallback } from "@/components/ui/avatar";
 
 type PageState = "home" | "masak_sendiri" | "detail_menu";
 
@@ -72,13 +74,14 @@ export default function TelorMuluApp() {
     <div className="max-w-4xl mx-auto p-6 space-y-8 animate-in fade-in slide-in-from-bottom-4 duration-500">
       <header className="flex flex-col md:flex-row justify-between items-center gap-6">
         <div 
-          className="cursor-pointer transition-all hover:scale-105 flex items-center gap-3 group" 
+          className="cursor-pointer transition-all hover:scale-105 flex items-center gap-2 group" 
           onClick={() => setPage("home")}
         >
-          <span className="text-6xl md:text-7xl group-hover:rotate-12 transition-transform duration-300">🍳</span>
-          <div className="flex flex-col -space-y-1 md:-space-y-2">
-            <h1 className="text-3xl md:text-4xl font-black text-primary tracking-tighter leading-tight uppercase">
-              TELOR<br/>MULU!
+          <span className="text-6xl md:text-7xl group-hover:rotate-12 transition-transform duration-300">🥚</span>
+          <div className="flex flex-col">
+            <h1 className="text-4xl md:text-5xl font-black text-primary tracking-tighter leading-[0.8] uppercase flex flex-col">
+              <span>TELOR</span>
+              <span>MULU!</span>
             </h1>
           </div>
         </div>
@@ -86,7 +89,7 @@ export default function TelorMuluApp() {
           onClick={() => setPage("masak_sendiri")}
           className="bg-white hover:bg-secondary/10 text-primary font-bold py-10 px-16 text-2xl rounded-full shadow-2xl border-4 border-primary transition-all hover:scale-110 active:scale-95"
         >
-          👨‍🍳 Masak Sendiri
+          👨‍🍳&nbsp;&nbsp;Masak Sendiri
         </Button>
       </header>
 
@@ -99,18 +102,48 @@ export default function TelorMuluApp() {
           {COMMUNITY_RECIPES.map((recipe) => (
             <Card 
               key={recipe.id} 
-              className="cursor-pointer border-2 border-primary hover:shadow-xl transition-all hover:-translate-y-1 bg-white overflow-hidden group flex flex-col md:flex-row"
+              className="cursor-pointer border-none shadow-md hover:shadow-lg transition-all bg-[#f9f8f4] overflow-hidden flex flex-col sm:flex-row h-auto sm:h-48 group"
               onClick={() => {
                 setSelectedRecipe(recipe);
                 setPage("detail_menu");
               }}
             >
-              <CardHeader className="bg-secondary/10 group-hover:bg-secondary/20 transition-colors md:w-1/3 flex items-center justify-center p-6 border-b-2 md:border-b-0 md:border-r-2 border-primary/10">
-                <CardTitle className="text-xl text-primary text-center">{recipe.title}</CardTitle>
-              </CardHeader>
-              <CardContent className="flex-1 p-6 flex flex-col justify-center">
-                <p className="text-3xl mb-2">{recipe.ingredientsSummary}</p>
-                <p className="text-sm italic text-primary/60">Klik buat liat tutorial pasrahnya...</p>
+              <div className="relative w-full sm:w-48 h-48 sm:h-full flex-shrink-0">
+                <Image 
+                  src={recipe.imageUrl} 
+                  alt={recipe.title}
+                  fill
+                  className="object-cover"
+                />
+              </div>
+              <CardContent className="flex-1 p-4 sm:p-6 flex flex-col justify-between relative">
+                <div className="absolute top-4 right-4 text-muted-foreground/60">
+                  <Bookmark className="w-6 h-6" />
+                </div>
+                <div className="space-y-2">
+                  <h3 className="text-xl sm:text-2xl font-bold text-black leading-tight pr-8">{recipe.title}</h3>
+                  <p className="text-sm text-muted-foreground line-clamp-2">
+                    {recipe.ingredients.join(' • ')}
+                  </p>
+                </div>
+                
+                <div className="flex flex-col gap-2 mt-4">
+                  <div className="flex items-center gap-4 text-sm text-muted-foreground">
+                    <span className="flex items-center gap-1">
+                      <Clock className="w-4 h-4" /> {recipe.cookTime}
+                    </span>
+                    <span className="flex items-center gap-1">
+                      <Users className="w-4 h-4" /> {recipe.servings}
+                    </span>
+                  </div>
+                  <div className="flex items-center gap-2">
+                    <Avatar className="w-6 h-6 border">
+                      <AvatarImage src={recipe.chefAvatar} />
+                      <AvatarFallback>{recipe.chefName[0]}</AvatarFallback>
+                    </Avatar>
+                    <span className="text-sm font-medium text-muted-foreground">{recipe.chefName}</span>
+                  </div>
+                </div>
               </CardContent>
             </Card>
           ))}
@@ -310,3 +343,7 @@ export default function TelorMuluApp() {
     </main>
   );
 }
+
+const CardHeader = ({ children, className }: { children: React.ReactNode, className?: string }) => (
+  <div className={`p-6 ${className}`}>{children}</div>
+);
