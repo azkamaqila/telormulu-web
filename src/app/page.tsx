@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, useEffect } from "react";
+import { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Checkbox } from "@/components/ui/checkbox";
@@ -11,12 +11,14 @@ import { Plus, Minus, ChefHat, ArrowLeft, Youtube, Sparkles, Loader2 } from "luc
 import { COMMUNITY_RECIPES, type StaticRecipe, getYouTubeLink } from "@/lib/recipes-data";
 import { AntiSultanAlert } from "@/components/AntiSultanAlert";
 import { generateEggRecipe, type GenerateEggRecipeOutput } from "@/ai/flows/generate-egg-recipe";
+import { useToast } from "@/hooks/use-toast";
 
 type PageState = "home" | "masak_sendiri" | "detail_menu";
 
 export default function TelorMuluApp() {
   const [page, setPage] = useState<PageState>("home");
   const [selectedRecipe, setSelectedRecipe] = useState<StaticRecipe | GenerateEggRecipeOutput | null>(null);
+  const { toast } = useToast();
   
   // Form States
   const [eggsCount, setEggsCount] = useState(1);
@@ -54,7 +56,12 @@ export default function TelorMuluApp() {
       });
       setSelectedRecipe(result);
       setPage("detail_menu");
-    } catch (error) {
+    } catch (error: any) {
+      toast({
+        variant: "destructive",
+        title: "Waduh, Chef AI lagi mogok!",
+        description: "Kayaknya internetnya lagi bapuk atau servernya lagi puyeng. Coba lagi ya!",
+      });
       console.error("AI Error:", error);
     } finally {
       setIsLoading(false);
