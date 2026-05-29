@@ -7,13 +7,12 @@ import { Checkbox } from "@/components/ui/checkbox";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { RadioGroup, RadioGroupItem } from "@/components/ui/radio-group";
-import { Plus, Minus, ChefHat, ArrowLeft, Youtube, Sparkles, Loader2, Clock, Users, Bookmark } from "lucide-react";
+import { Plus, Minus, ChefHat, ArrowLeft, Youtube, Sparkles, Loader2, Clock } from "lucide-react";
 import { COMMUNITY_RECIPES, type StaticRecipe, getYouTubeLink } from "@/lib/recipes-data";
 import { AntiSultanAlert } from "@/components/AntiSultanAlert";
 import { generateEggRecipe, type GenerateEggRecipeOutput } from "@/ai/flows/generate-egg-recipe";
 import { useToast } from "@/hooks/use-toast";
 import Image from "next/image";
-import { Avatar, AvatarImage, AvatarFallback } from "@/components/ui/avatar";
 
 type PageState = "home" | "masak_sendiri" | "detail_menu";
 
@@ -116,33 +115,18 @@ export default function TelorMuluApp() {
                   className="object-cover"
                 />
               </div>
-              <CardContent className="flex-1 p-4 sm:p-6 flex flex-col justify-between relative">
-                <div className="absolute top-4 right-4 text-muted-foreground/60">
-                  <Bookmark className="w-6 h-6" />
-                </div>
+              <CardContent className="flex-1 p-4 sm:p-6 flex flex-col justify-between">
                 <div className="space-y-2">
-                  <h3 className="text-xl sm:text-2xl font-bold text-black leading-tight pr-8">{recipe.title}</h3>
+                  <h3 className="text-xl sm:text-2xl font-bold text-black leading-tight">{recipe.title}</h3>
                   <p className="text-sm text-muted-foreground line-clamp-2">
                     {recipe.ingredients.join(' • ')}
                   </p>
                 </div>
                 
-                <div className="flex flex-col gap-2 mt-4">
-                  <div className="flex items-center gap-4 text-sm text-muted-foreground">
-                    <span className="flex items-center gap-1">
-                      <Clock className="w-4 h-4" /> {recipe.cookTime}
-                    </span>
-                    <span className="flex items-center gap-1">
-                      <Users className="w-4 h-4" /> {recipe.servings}
-                    </span>
-                  </div>
-                  <div className="flex items-center gap-2">
-                    <Avatar className="w-6 h-6 border">
-                      <AvatarImage src={recipe.chefAvatar} />
-                      <AvatarFallback>{recipe.chefName[0]}</AvatarFallback>
-                    </Avatar>
-                    <span className="text-sm font-medium text-muted-foreground">{recipe.chefName}</span>
-                  </div>
+                <div className="flex items-center gap-4 text-sm text-muted-foreground mt-4">
+                  <span className="flex items-center gap-1">
+                    <Clock className="w-4 h-4" /> {recipe.cookTime}
+                  </span>
                 </div>
               </CardContent>
             </Card>
