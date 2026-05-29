@@ -1,3 +1,4 @@
+
 "use client";
 
 import { useState } from "react";
@@ -86,7 +87,7 @@ export default function TelorMuluApp() {
         </div>
         <Button 
           onClick={() => setPage("masak_sendiri")}
-          className="bg-white hover:bg-secondary/10 text-primary font-bold py-6 px-10 text-xl rounded-full shadow-xl border-2 border-primary transition-all hover:scale-105 active:scale-95"
+          className="bg-white hover:bg-secondary/10 text-primary font-bold py-5 px-8 text-lg rounded-full shadow-xl border-2 border-primary transition-all hover:scale-105 active:scale-95"
         >
           👨‍🍳&nbsp;&nbsp;Masak Sendiri
         </Button>
@@ -94,8 +95,7 @@ export default function TelorMuluApp() {
 
       <section className="space-y-4">
         <div className="flex items-center gap-2">
-          <span className="text-xl">🥚</span>
-          <h2 className="text-xl font-bold text-primary">Masakan Telur Populer ⤵️</h2>
+          <h2 className="text-xl font-bold text-primary">Ide Menu Telur Buat Kamu 🥚</h2>
         </div>
         <div className="grid grid-cols-1 gap-6">
           {COMMUNITY_RECIPES.map((recipe) => (
@@ -158,14 +158,14 @@ export default function TelorMuluApp() {
           <h2 className="text-2xl flex items-center gap-2 font-bold">
             <ChefHat className="w-8 h-8" /> Atur Strategi Masak
           </h2>
-          <p className="text-white/80 italic text-sm">Pilih senjata dan amunisi yang ada di kosan.</p>
+          <p className="text-white/80 italic text-sm">Cek dulu apa aja yang ada di kulkas/meja kosan.</p>
         </div>
         <CardContent className="p-8 space-y-8">
           {isSultan && <AntiSultanAlert />}
 
           {/* Section 1: Eggs Count */}
           <div className="space-y-4">
-            <Label className="text-lg font-bold">1. Telur yang dimiliki (Maksimal 10)</Label>
+            <Label className="text-lg font-bold">1. Stok Telur Kamu (Maks 10)</Label>
             <div className="flex items-center gap-6 bg-secondary/10 p-4 rounded-2xl border-2 border-dashed border-primary">
               <Button 
                 variant="outline" 
@@ -192,7 +192,7 @@ export default function TelorMuluApp() {
 
           {/* Section 2: Main Ingredients */}
           <div className="space-y-4">
-            <Label className="text-lg font-bold">2. Bahan Utama (Khas Kosan)</Label>
+            <Label className="text-lg font-bold">2. Bahan Tambahan (Ala Kosan)</Label>
             <div className="grid grid-cols-2 sm:grid-cols-3 gap-4">
               {["Kecap", "Bawang Merah", "Garam", "Cabai", "Mie Instan"].map((item) => (
                 <div key={item} className="flex items-center space-x-2 bg-white border border-primary/20 p-3 rounded-lg hover:bg-secondary/5 transition-colors cursor-pointer" onClick={() => toggleMainIngredient(item)}>
@@ -210,12 +210,12 @@ export default function TelorMuluApp() {
                 onClick={() => setShowAdditional(!showAdditional)}
                 className="text-primary hover:text-primary hover:bg-secondary/20 h-auto py-2 font-bold"
               >
-                + Tambahan
+                + Ada yang lain?
               </Button>
             </div>
             {showAdditional && (
               <Input 
-                placeholder="Misal: Sosis, Royco, Daun Bawang..." 
+                placeholder="Sosis, Royco, atau daun bawang..." 
                 value={additionalIngredients}
                 onChange={(e) => setAdditionalIngredients(e.target.value)}
                 className="border-primary focus-visible:ring-secondary mt-2"
@@ -225,7 +225,7 @@ export default function TelorMuluApp() {
 
           {/* Section 3: Tools */}
           <div className="space-y-4">
-            <Label className="text-lg font-bold">3. Alat yang Dimiliki</Label>
+            <Label className="text-lg font-bold">3. Pake Alat Apa?</Label>
             <RadioGroup value={cookingTool} onValueChange={setCookingTool} className="grid grid-cols-1 sm:grid-cols-3 gap-4">
               {["Kompor & Teflon", "Rice Cooker", "Setrikaan (Nekat)"].map((tool) => (
                 <div key={tool} className={`flex items-center justify-center p-3 border-2 rounded-xl cursor-pointer transition-all ${cookingTool === tool ? 'bg-secondary border-primary shadow-md scale-105' : 'bg-white border-primary/20 hover:border-primary/50'}`} onClick={() => setCookingTool(tool)}>
@@ -243,11 +243,11 @@ export default function TelorMuluApp() {
           >
             {isLoading ? (
               <span className="flex items-center gap-2">
-                <Loader2 className="w-6 h-6 animate-spin" /> Menghubungi Chef AI...
+                <Loader2 className="w-6 h-6 animate-spin" /> Lagi tanya Chef AI...
               </span>
             ) : (
               <span className="flex items-center gap-2">
-                <Sparkles className="w-6 h-6" /> Pecut AI untuk Masak!
+                <Sparkles className="w-6 h-6" /> Gas Masak!
               </span>
             )}
           </Button>
@@ -278,7 +278,7 @@ export default function TelorMuluApp() {
           onClick={() => setPage(isGenerated ? "masak_sendiri" : "home")}
           className="flex items-center gap-2 text-primary font-bold rounded-full border-primary px-6 hover:bg-secondary/10"
         >
-          <ArrowLeft className="w-4 h-4" /> Kembali
+          <ArrowLeft className="w-4 h-4" /> Balik
         </Button>
 
         <div className="flex flex-col md:flex-row md:items-center justify-between gap-4">
@@ -293,12 +293,12 @@ export default function TelorMuluApp() {
 
         <Card className="border-2 border-primary bg-white shadow-2xl overflow-hidden">
           <CardContent className="p-0 flex flex-col md:flex-row divide-y md:divide-y-0 md:divide-x divide-primary/20">
-            {/* Left Column: Ingredients */}
+            {/* Left Column: Ingredients & Tools */}
             <div className="md:w-[35%] p-8 bg-secondary/5">
               <div className="space-y-12">
                 <section>
                   <h2 className="text-2xl font-bold text-primary mb-6 flex items-center gap-2 underline decoration-secondary">
-                    Bahan-bahan
+                    Bahan-bahannya
                   </h2>
                   <ul className="space-y-4">
                     {ingredients.map((item, i) => (
@@ -312,7 +312,7 @@ export default function TelorMuluApp() {
 
                 <section>
                   <h2 className="text-2xl font-bold text-primary mb-6 flex items-center gap-2 underline decoration-secondary">
-                    Alat yang Dibutuhkan
+                    Alat yang Perlu Disiapin
                   </h2>
                   <ul className="space-y-4">
                     {tools.map((item, i) => (
@@ -321,7 +321,7 @@ export default function TelorMuluApp() {
                         {item}
                       </li>
                     ))}
-                    {tools.length === 0 && <li className="text-muted-foreground italic">Alat dapur standar.</li>}
+                    {tools.length === 0 && <li className="text-muted-foreground italic">Cukup alat dapur standar aja.</li>}
                   </ul>
                 </section>
               </div>
@@ -330,7 +330,7 @@ export default function TelorMuluApp() {
             {/* Right Column: Steps */}
             <div className="flex-1 p-8">
               <h2 className="text-2xl font-bold text-primary mb-6 flex items-center gap-2">
-                <ChefHat className="w-6 h-6" /> Cara Masak
+                <ChefHat className="w-6 h-6" /> Gini Cara Masaknya
               </h2>
               <div className="recipe-markdown text-lg leading-relaxed text-black/90">
                 {selectedRecipe.stepsMarkdown.split('\n').map((line, i) => (
@@ -344,7 +344,7 @@ export default function TelorMuluApp() {
         {/* Video Section */}
         <div className="space-y-4 pt-4">
           <h3 className="text-xl font-bold text-primary flex items-center gap-2 justify-center md:justify-start">
-            <Youtube className="w-6 h-6 text-red-600" /> Referensi Visual (Biar Gak Gagal)
+            <Youtube className="w-6 h-6 text-red-600" /> Tonton Biar Gak Gagal 🎬
           </h3>
           <div className="aspect-video w-full rounded-3xl overflow-hidden border-4 border-primary shadow-2xl bg-black">
             <iframe 
@@ -368,7 +368,7 @@ export default function TelorMuluApp() {
             variant="outline"
             className="border-2 border-primary text-primary font-bold px-12 py-6 rounded-full hover:bg-primary hover:text-white transition-colors"
           >
-            Udah Kenyang? Balik Home
+            Kenyang? Cabut ke Home
           </Button>
         </div>
       </div>
