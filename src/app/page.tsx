@@ -1,4 +1,3 @@
-
 "use client";
 
 import { useState } from "react";
@@ -81,11 +80,10 @@ export default function TelorMuluApp() {
             <Image 
               src={logoImage.imageUrl} 
               alt={logoImage.description} 
-              width={250} 
-              height={75} 
+              width={220} 
+              height={66} 
               className="object-contain"
               priority
-              data-ai-hint={logoImage.imageHint}
             />
           )}
         </div>

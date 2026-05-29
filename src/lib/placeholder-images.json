@@ -3,7 +3,7 @@
     {
       "id": "app-logo",
       "description": "Logo Resmi Telor Mulu",
-      "imageUrl": "https://picsum.photos/seed/telormulu-brand-logo/400/120",
+      "imageUrl": "/logo.png",
       "imageHint": "restaurant logo"
     }
   ]
