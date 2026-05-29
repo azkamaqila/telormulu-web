@@ -76,7 +76,7 @@ export default function TelorMuluApp() {
           className="cursor-pointer transition-all hover:scale-105 flex items-center gap-2 group" 
           onClick={() => setPage("home")}
         >
-          <span className="text-6xl md:text-7xl group-hover:rotate-12 transition-transform duration-300">🥚</span>
+          <span className="text-6xl md:text-7xl group-hover:rotate-12 transition-transform duration-300">🍳</span>
           <div className="flex flex-col">
             <h1 className="text-4xl md:text-5xl font-black text-primary tracking-tighter leading-[0.8] uppercase flex flex-col">
               <span>TELOR</span>
