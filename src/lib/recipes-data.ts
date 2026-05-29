@@ -17,7 +17,7 @@ export const COMMUNITY_RECIPES: StaticRecipe[] = [
   {
     id: 'dadar-gulung',
     title: 'Telur Dadar Gulung Akhir Bulan',
-    ingredients: ['telur', 'bawang merah', 'garam', 'kecap manis', 'minyak goreng'],
+    ingredients: ['2 butir telur ayam', '3 siung bawang merah iris', '1/2 sdt garam', '1 sdm kecap manis', '2 sdm minyak goreng'],
     ingredientsSummary: '🥚🥚🧅🧂 Kecap sisa semalam',
     stepsMarkdown: `1. Pecahin telur dengan penuh doa dan harapan.
 2. Kocok lepas, jangan sekencang beban hidup.
@@ -34,7 +34,7 @@ export const COMMUNITY_RECIPES: StaticRecipe[] = [
   {
     id: 'kecap-pontianak',
     title: 'Telur Kecap Pontianak Estetik',
-    ingredients: ['telur', 'bawang putih', 'cabai', 'kecap manis', 'nasi hangat'],
+    ingredients: ['2 butir telur ayam', '2 siung bawang putih cincang', '3 buah cabai rawit iris', '2 sdm kecap manis', '1 piring nasi hangat'],
     ingredientsSummary: '🥚🥚🧄🌶️ Kecap Manis Legendaris',
     stepsMarkdown: `1. Goreng telur mata sapi, usahakan pinggirannya garing (crispy) tapi tengahnya masih malu-malu (setengah matang).
 2. Tumis bawang putih dan cabai iris pake sisa minyak tadi.
@@ -51,7 +51,7 @@ export const COMMUNITY_RECIPES: StaticRecipe[] = [
   {
     id: 'semur-pasrah',
     title: 'Semur Telur Pasrah Nyaris Selesai',
-    ingredients: ['telur rebus', 'kecap manis', 'kentang', 'garam', 'lada', 'air kran'],
+    ingredients: ['4 butir telur rebus', '3 sdm kecap manis', '1 buah kentang potong dadu', '1/2 sdt garam & lada', '200ml air kran'],
     ingredientsSummary: '🥚🧂🥔 Air kran secukupnya',
     stepsMarkdown: `1. Rebus telur sampe keras sekeras hati mantan.
 2. Kupas kulitnya (hati-hati jangan sampe telurnya ikut kebuang).
@@ -68,10 +68,11 @@ export const COMMUNITY_RECIPES: StaticRecipe[] = [
 ];
 
 export const getYouTubeLink = (title: string) => {
-  if (title.toLowerCase().includes('dadar')) return 'https://www.youtube.com/embed/S_8qK2y466M';
-  if (title.toLowerCase().includes('kecap')) return 'https://www.youtube.com/embed/jZf-8w9C0_A';
-  if (title.toLowerCase().includes('semur')) return 'https://www.youtube.com/embed/kYj6oN_fKTM';
-  if (title.toLowerCase().includes('rice cooker')) return 'https://www.youtube.com/embed/oG06m69I_hQ';
-  if (title.toLowerCase().includes('setrika')) return 'https://www.youtube.com/embed/dQw4w9WgXcQ';
+  const t = title.toLowerCase();
+  if (t.includes('dadar')) return 'https://www.youtube.com/embed/S_8qK2y466M';
+  if (t.includes('kecap')) return 'https://www.youtube.com/embed/jZf-8w9C0_A';
+  if (t.includes('semur')) return 'https://www.youtube.com/embed/kYj6oN_fKTM';
+  if (t.includes('rice cooker')) return 'https://www.youtube.com/embed/oG06m69I_hQ';
+  if (t.includes('setrika')) return 'https://www.youtube.com/embed/dQw4w9WgXcQ';
   return 'https://www.youtube.com/embed/oG06m69I_hQ'; // Default fallback
 };

@@ -265,6 +265,8 @@ export default function TelorMuluApp() {
       ? selectedRecipe.ingredients 
       : (selectedRecipe as GenerateEggRecipeOutput).ingredientsList || [];
 
+    const cookTime = 'cookTime' in selectedRecipe ? selectedRecipe.cookTime : '15 menit';
+
     return (
       <div className="max-w-5xl mx-auto p-6 space-y-8 animate-in fade-in zoom-in-95 duration-500">
         <Button 
@@ -275,7 +277,15 @@ export default function TelorMuluApp() {
           <ArrowLeft className="w-4 h-4" /> Kembali
         </Button>
 
-        <h1 className="text-4xl font-extrabold text-primary leading-tight text-center md:text-left">{selectedRecipe.title}</h1>
+        <div className="flex flex-col md:flex-row md:items-center justify-between gap-4">
+          <h1 className="text-4xl font-extrabold text-primary leading-tight text-center md:text-left flex-1">
+            {selectedRecipe.title}
+          </h1>
+          <div className="flex items-center gap-2 bg-secondary/20 px-6 py-2 rounded-full border-2 border-primary/20 self-center md:self-auto">
+            <Clock className="w-5 h-5 text-primary" />
+            <span className="font-bold text-primary">{cookTime}</span>
+          </div>
+        </div>
 
         <Card className="border-2 border-primary bg-white shadow-2xl overflow-hidden">
           <CardContent className="p-0 flex flex-col md:flex-row divide-y md:divide-y-0 md:divide-x divide-primary/20">
