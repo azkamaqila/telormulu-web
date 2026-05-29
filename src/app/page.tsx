@@ -1,4 +1,3 @@
-
 "use client";
 
 import { useState } from "react";
@@ -8,7 +7,7 @@ import { Checkbox } from "@/components/ui/checkbox";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { RadioGroup, RadioGroupItem } from "@/components/ui/radio-group";
-import { Plus, Minus, ChefHat, ArrowLeft, Youtube, Sparkles, Loader2, Clock, Wrench } from "lucide-react";
+import { Plus, Minus, ChefHat, ArrowLeft, Youtube, Sparkles, Loader2, Clock, Wrench, Utensils, ShoppingBasket } from "lucide-react";
 import { COMMUNITY_RECIPES, type StaticRecipe, getYouTubeLink } from "@/lib/recipes-data";
 import { AntiSultanAlert } from "@/components/AntiSultanAlert";
 import { generateEggRecipe, type GenerateEggRecipeOutput } from "@/ai/flows/generate-egg-recipe";
@@ -298,7 +297,7 @@ export default function TelorMuluApp() {
               <div className="space-y-12">
                 <section>
                   <h2 className="text-2xl font-bold text-primary mb-6 flex items-center gap-2 underline decoration-secondary">
-                    Bahan-bahannya
+                    <ShoppingBasket className="w-6 h-6 text-primary" /> Bahan-bahannya
                   </h2>
                   <ul className="space-y-4">
                     {ingredients.map((item, i) => (
@@ -312,7 +311,7 @@ export default function TelorMuluApp() {
 
                 <section>
                   <h2 className="text-2xl font-bold text-primary mb-6 flex items-center gap-2 underline decoration-secondary">
-                    Alat yang Perlu Disiapin
+                    <Utensils className="w-6 h-6 text-primary" /> Alat yang Perlu Disiapin
                   </h2>
                   <ul className="space-y-4">
                     {tools.map((item, i) => (
