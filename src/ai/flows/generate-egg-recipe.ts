@@ -1,6 +1,6 @@
 'use server';
 /**
- * @fileOverview A Genkit flow for generating unique, humorous, and culturally relevant egg recipes.
+ * @fileOverview A Genkit flow for generating unique and detailed egg recipes.
  *
  * - generateEggRecipe - A function that handles the egg recipe generation process.
  * - GenerateEggRecipeInput - The input type for the generateEggRecipe function.
@@ -17,18 +17,18 @@ const GenerateEggRecipeInputSchema = z.object({
     .string()
     .optional()
     .describe('Any additional ingredients the user has manually entered.'),
-  cookingTools: z.array(z.string()).describe('A list of cooking tools available, such as "Kompor & Teflon", "Rice Cooker", or "Setrikaan (Nekat)".'),
+  cookingTools: z.array(z.string()).describe('A list of cooking tools available.'),
 });
 export type GenerateEggRecipeInput = z.infer<typeof GenerateEggRecipeInputSchema>;
 
 const GenerateEggRecipeOutputSchema = z.object({
-  title: z.string().describe('A creative, humorous, and Indonesian slang-filled title for the recipe.'),
-  cookTime: z.string().describe('Estimated cooking time, e.g., "10 menit" or "15 mins".'),
-  ingredientsList: z.array(z.string()).describe('A plain list of ingredients used with measurements, without any emojis (e.g., ["2 butir telur", "1 sdm kecap"]).'),
-  ingredientsSummary: z.string().describe('A summary of ingredients used, presented with relevant emojis.'),
+  title: z.string().describe('A creative and professional title for the recipe.'),
+  cookTime: z.string().describe('Estimated cooking time, e.g., "10 menit".'),
+  ingredientsList: z.array(z.string()).describe('A plain list of ingredients with precise measurements.'),
+  toolsUsed: z.array(z.string()).describe('A list of cooking tools required for this specific recipe.'),
   stepsMarkdown: z
     .string()
-    .describe('Step-by-step cooking instructions formatted in markdown, using engaging, funny Indonesian boarding-house slang.'),
+    .describe('Detailed, step-by-step cooking instructions in markdown format. Focus on clarity, technique, and precise timing. Avoid unnecessary jokes.'),
 });
 export type GenerateEggRecipeOutput = z.infer<typeof GenerateEggRecipeOutputSchema>;
 
@@ -40,10 +40,9 @@ const prompt = ai.definePrompt({
   name: 'generateEggRecipePrompt',
   input: {schema: GenerateEggRecipeInputSchema},
   output: {schema: GenerateEggRecipeOutputSchema},
-  prompt: `You are an expert chef specializing in budget-friendly, creative, and hilarious egg recipes for Indonesian college students living in boarding houses (anak kos).
-Your persona is casual, witty, empathetic, and full of Indonesian slang and cultural references.
+  prompt: `You are a professional chef specializing in creative egg-based cuisine for limited kitchen environments.
 
-Based on the following available ingredients and cooking tools, create a unique and funny egg recipe. Focus on making it delicious yet simple, suitable for a tight budget and limited equipment.
+Based on the following available ingredients and tools, create a high-quality, detailed recipe. The tone should be informative and professional.
 
 --- INPUT ---
 Telur yang dimiliki: {{{eggsCount}}} butir
@@ -52,11 +51,11 @@ Bahan Utama: {{#each mainIngredients}}{{{this}}}{{#unless @last}}, {{/unless}}{{
 Alat yang Dimiliki: {{#each cookingTools}}{{{this}}}{{#unless @last}}, {{/unless}}{{/each}}
 
 --- INSTRUCTIONS ---
-1.  **Title**: Create a recipe title that is catchy, humorous, and uses Indonesian slang relevant to the anak kos lifestyle.
-2.  **Cook Time**: Estimate how long it takes to cook this recipe.
-3.  **Ingredients List**: Provide a plain string array of the specific ingredients needed WITH measurements (e.g., ["2 butir telur", "1 sdm Kecap manis", "1 siung bawang merah"]). DO NOT include emojis here.
-4.  **Ingredients Summary**: List the main ingredients used in the recipe, summarized with appropriate emojis. For example, "🥚🥚🧅🌶️ kecap manis".
-5.  **Steps Markdown**: Provide step-by-step instructions in markdown format. Make these steps highly engaging, funny, and incorporate common Indonesian boarding-house slang.
+1. **Title**: Create a catchy yet professional title.
+2. **Cook Time**: Accurate estimation of cooking time.
+3. **Ingredients List**: Precise list with measurements (e.g., "2 butir telur", "1 sdm Kecap manis").
+4. **Tools Used**: Identify which of the available tools are used in this recipe.
+5. **Steps Markdown**: Provide detailed, structured instructions. Explain techniques clearly (e.g., "pecahkan telur ke wadah terpisah", "panaskan minyak dengan api sedang"). Do not use slang or "jokes nyeleneh". Focus on making the recipe easy to follow correctly.
 
 Respond strictly in JSON format according to the output schema.`,
 });

@@ -7,7 +7,7 @@ import { Checkbox } from "@/components/ui/checkbox";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { RadioGroup, RadioGroupItem } from "@/components/ui/radio-group";
-import { Plus, Minus, ChefHat, ArrowLeft, Youtube, Sparkles, Loader2, Clock } from "lucide-react";
+import { Plus, Minus, ChefHat, ArrowLeft, Youtube, Sparkles, Loader2, Clock, Wrench } from "lucide-react";
 import { COMMUNITY_RECIPES, type StaticRecipe, getYouTubeLink } from "@/lib/recipes-data";
 import { AntiSultanAlert } from "@/components/AntiSultanAlert";
 import { generateEggRecipe, type GenerateEggRecipeOutput } from "@/ai/flows/generate-egg-recipe";
@@ -265,6 +265,10 @@ export default function TelorMuluApp() {
       ? selectedRecipe.ingredients 
       : (selectedRecipe as GenerateEggRecipeOutput).ingredientsList || [];
 
+    const tools = 'tools' in selectedRecipe
+      ? selectedRecipe.tools
+      : (selectedRecipe as GenerateEggRecipeOutput).toolsUsed || [];
+
     const cookTime = 'cookTime' in selectedRecipe ? selectedRecipe.cookTime : '15 menit';
 
     return (
@@ -289,28 +293,44 @@ export default function TelorMuluApp() {
 
         <Card className="border-2 border-primary bg-white shadow-2xl overflow-hidden">
           <CardContent className="p-0 flex flex-col md:flex-row divide-y md:divide-y-0 md:divide-x divide-primary/20">
-            {/* Left Column: Ingredients (less than half) */}
+            {/* Left Column: Ingredients */}
             <div className="md:w-[35%] p-8 bg-secondary/5">
-              <h2 className="text-2xl font-bold text-primary mb-6 flex items-center gap-2 underline decoration-secondary">
-                Bahan-bahan
-              </h2>
-              <ul className="space-y-4">
-                {ingredients.map((item, i) => (
-                  <li key={i} className="text-lg font-medium text-black/80 flex items-start gap-3">
-                    <span className="w-2 h-2 rounded-full bg-primary mt-2.5 flex-shrink-0" />
-                    {item}
-                  </li>
-                ))}
-                {ingredients.length === 0 && (
-                  <li className="text-muted-foreground italic">Lihat rangkuman amunisi di langkah-langkah.</li>
-                )}
-              </ul>
+              <div className="space-y-12">
+                <section>
+                  <h2 className="text-2xl font-bold text-primary mb-6 flex items-center gap-2 underline decoration-secondary">
+                    Bahan-bahan
+                  </h2>
+                  <ul className="space-y-4">
+                    {ingredients.map((item, i) => (
+                      <li key={i} className="text-lg font-medium text-black/80 flex items-start gap-3">
+                        <span className="w-2 h-2 rounded-full bg-primary mt-2.5 flex-shrink-0" />
+                        {item}
+                      </li>
+                    ))}
+                  </ul>
+                </section>
+
+                <section>
+                  <h2 className="text-2xl font-bold text-primary mb-6 flex items-center gap-2 underline decoration-secondary">
+                    Alat yang Dibutuhkan
+                  </h2>
+                  <ul className="space-y-4">
+                    {tools.map((item, i) => (
+                      <li key={i} className="text-lg font-medium text-black/80 flex items-start gap-3">
+                        <Wrench className="w-5 h-5 text-primary mt-1 flex-shrink-0" />
+                        {item}
+                      </li>
+                    ))}
+                    {tools.length === 0 && <li className="text-muted-foreground italic">Alat dapur standar.</li>}
+                  </ul>
+                </section>
+              </div>
             </div>
 
-            {/* Right Column: Steps (more than half) */}
+            {/* Right Column: Steps */}
             <div className="flex-1 p-8">
               <h2 className="text-2xl font-bold text-primary mb-6 flex items-center gap-2">
-                <ChefHat className="w-6 h-6" /> Cara Masak
+                <ChefHat className="w-6 h-6" /> Cara Masak (Detail)
               </h2>
               <div className="recipe-markdown text-lg leading-relaxed text-black/90">
                 {selectedRecipe.stepsMarkdown.split('\n').map((line, i) => (
@@ -321,7 +341,7 @@ export default function TelorMuluApp() {
           </CardContent>
         </Card>
 
-        {/* Video Section (Outside the box) */}
+        {/* Video Section */}
         <div className="space-y-4 pt-4">
           <h3 className="text-xl font-bold text-primary flex items-center gap-2 justify-center md:justify-start">
             <Youtube className="w-6 h-6 text-red-600" /> Referensi Visual (Biar Gak Gagal)
