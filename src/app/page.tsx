@@ -12,6 +12,8 @@ import { COMMUNITY_RECIPES, type StaticRecipe, getYouTubeLink } from "@/lib/reci
 import { AntiSultanAlert } from "@/components/AntiSultanAlert";
 import { generateEggRecipe, type GenerateEggRecipeOutput } from "@/ai/flows/generate-egg-recipe";
 import { useToast } from "@/hooks/use-toast";
+import Image from "next/image";
+import { PlaceHolderImages } from "@/lib/placeholder-images";
 
 type PageState = "home" | "masak_sendiri" | "detail_menu";
 
@@ -28,6 +30,8 @@ export default function TelorMuluApp() {
   const [cookingTool, setCookingTool] = useState("Kompor & Teflon");
   const [isSultan, setIsSultan] = useState(false);
   const [isLoading, setIsLoading] = useState(false);
+
+  const logoImage = PlaceHolderImages.find(img => img.id === "app-logo");
 
   const toggleMainIngredient = (id: string) => {
     setMainIngredients(prev => 
@@ -71,9 +75,21 @@ export default function TelorMuluApp() {
   const renderHome = () => (
     <div className="max-w-4xl mx-auto p-6 space-y-8 animate-in fade-in slide-in-from-bottom-4 duration-500">
       <header className="flex flex-col md:flex-row justify-between items-center gap-4">
-        <h1 className="text-4xl font-bold text-primary flex items-center gap-2">
-          🍳 telormulu
-        </h1>
+        <div className="flex items-center gap-4 cursor-pointer" onClick={() => setPage("home")}>
+          {logoImage && (
+            <Image 
+              src={logoImage.imageUrl} 
+              alt={logoImage.description} 
+              width={80} 
+              height={80} 
+              className="rounded-full border-2 border-primary shadow-md"
+              data-ai-hint={logoImage.imageHint}
+            />
+          )}
+          <h1 className="text-4xl font-black text-primary tracking-tighter uppercase italic">
+            TELOR MULU!
+          </h1>
+        </div>
         <Button 
           onClick={() => setPage("masak_sendiri")}
           className="bg-secondary hover:bg-secondary/90 text-primary font-bold py-6 px-8 rounded-full shadow-lg border-2 border-primary transition-all hover:scale-105"
