@@ -297,7 +297,7 @@ export default function TelorMuluApp() {
               <div className="space-y-12">
                 <section>
                   <h2 className="text-2xl font-bold text-primary mb-6 flex items-center gap-2 underline decoration-secondary">
-                    <ShoppingBasket className="w-6 h-6 text-primary" /> Bahan-bahannya
+                    <ShoppingBasket className="w-6 h-6 text-primary" /> Bahannya
                   </h2>
                   <ul className="space-y-4">
                     {ingredients.map((item, i) => (
@@ -311,7 +311,7 @@ export default function TelorMuluApp() {
 
                 <section>
                   <h2 className="text-2xl font-bold text-primary mb-6 flex items-center gap-2 underline decoration-secondary">
-                    <Utensils className="w-6 h-6 text-primary" /> Alat yang Perlu Disiapin
+                    <Utensils className="w-6 h-6 text-primary" /> Alat-alat
                   </h2>
                   <ul className="space-y-4">
                     {tools.map((item, i) => (
