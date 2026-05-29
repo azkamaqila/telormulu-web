@@ -95,21 +95,21 @@ export default function TelorMuluApp() {
           <span className="text-xl">🥚</span>
           <h2 className="text-xl font-bold text-primary">Masakan Telur Populer ⤵️</h2>
         </div>
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+        <div className="grid grid-cols-1 gap-6">
           {COMMUNITY_RECIPES.map((recipe) => (
             <Card 
               key={recipe.id} 
-              className="cursor-pointer border-2 border-primary hover:shadow-xl transition-all hover:-translate-y-1 bg-white overflow-hidden group"
+              className="cursor-pointer border-2 border-primary hover:shadow-xl transition-all hover:-translate-y-1 bg-white overflow-hidden group flex flex-col md:flex-row"
               onClick={() => {
                 setSelectedRecipe(recipe);
                 setPage("detail_menu");
               }}
             >
-              <CardHeader className="bg-secondary/10 group-hover:bg-secondary/20 transition-colors">
-                <CardTitle className="text-lg text-primary">{recipe.title}</CardTitle>
+              <CardHeader className="bg-secondary/10 group-hover:bg-secondary/20 transition-colors md:w-1/3 flex items-center justify-center p-6 border-b-2 md:border-b-0 md:border-r-2 border-primary/10">
+                <CardTitle className="text-xl text-primary text-center">{recipe.title}</CardTitle>
               </CardHeader>
-              <CardContent className="pt-4">
-                <p className="text-2xl mb-2">{recipe.ingredientsSummary}</p>
+              <CardContent className="flex-1 p-6 flex flex-col justify-center">
+                <p className="text-3xl mb-2">{recipe.ingredientsSummary}</p>
                 <p className="text-sm italic text-primary/60">Klik buat liat tutorial pasrahnya...</p>
               </CardContent>
             </Card>
