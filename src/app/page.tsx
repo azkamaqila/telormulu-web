@@ -1,4 +1,3 @@
-
 "use client";
 
 import { useState } from "react";
@@ -85,9 +84,9 @@ export default function TelorMuluApp() {
         </div>
         <Button 
           onClick={() => setPage("masak_sendiri")}
-          className="bg-secondary hover:bg-secondary/90 text-primary font-bold py-6 px-8 rounded-full shadow-lg border-2 border-primary transition-all hover:scale-105"
+          className="bg-white hover:bg-secondary/10 text-primary font-bold py-6 px-8 rounded-full shadow-lg border-2 border-primary transition-all hover:scale-105"
         >
-          🍳 Masak Sendiri
+          👨‍🍳 Masak Sendiri
         </Button>
       </header>
 
