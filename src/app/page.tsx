@@ -130,7 +130,6 @@ export default function TelorMuluApp() {
                 </div>
               </CardContent>
               <div className="bg-primary w-24 sm:w-32 flex flex-col items-center justify-center gap-1 p-2 flex-shrink-0">
-                <span className="text-white text-[10px] font-black uppercase tracking-tighter">Butuh:</span>
                 <div className="grid grid-cols-2 gap-1 items-center justify-center">
                   {Array.from({ length: recipe.eggsCount }).map((_, i) => (
                     <span key={i} className="text-xl sm:text-2xl drop-shadow-sm">🥚</span>
