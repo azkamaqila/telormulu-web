@@ -329,7 +329,7 @@ export default function TelorMuluApp() {
             {/* Right Column: Steps */}
             <div className="flex-1 p-8">
               <h2 className="text-2xl font-bold text-primary mb-6 flex items-center gap-2">
-                <ChefHat className="w-6 h-6" /> Gini Cara Masaknya
+                <ChefHat className="w-6 h-6" /> Cara Masak
               </h2>
               <div className="recipe-markdown text-lg leading-relaxed text-black/90">
                 {selectedRecipe.stepsMarkdown.split('\n').map((line, i) => (
@@ -367,7 +367,7 @@ export default function TelorMuluApp() {
             variant="outline"
             className="border-2 border-primary text-primary font-bold px-12 py-6 rounded-full hover:bg-primary hover:text-white transition-colors"
           >
-            Kenyang? Cabut ke Home
+            Balik ke awal
           </Button>
         </div>
       </div>
