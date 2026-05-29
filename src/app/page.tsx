@@ -145,12 +145,13 @@ export default function TelorMuluApp() {
 
   const renderMasakSendiri = () => (
     <div className="max-w-2xl mx-auto p-6 space-y-6 animate-in fade-in slide-in-from-bottom-4 duration-500">
-      <button 
+      <Button 
+        variant="outline"
         onClick={() => setPage("home")}
-        className="flex items-center gap-2 text-primary font-semibold hover:underline"
+        className="flex items-center gap-2 text-primary font-bold rounded-full border-primary px-6 hover:bg-secondary/10"
       >
         <ArrowLeft className="w-4 h-4" /> Balik ke Menu Utama
-      </button>
+      </Button>
 
       <Card className="border-2 border-primary shadow-2xl bg-white overflow-hidden">
         <div className="bg-primary text-white p-6">
@@ -172,7 +173,7 @@ export default function TelorMuluApp() {
                 onClick={(e) => { e.stopPropagation(); setEggsCount(Math.max(1, eggsCount - 1)); }}
                 className="rounded-full border-primary text-primary hover:bg-primary hover:text-white"
               >
-                <Minus className="w-5 h-5" />
+                <在高 Minus className="w-5 h-5" />
               </Button>
               <div className="text-center min-w-[100px]">
                 <span className="text-4xl font-bold">{eggsCount}</span>
@@ -262,12 +263,13 @@ export default function TelorMuluApp() {
 
     return (
       <div className="max-w-3xl mx-auto p-6 space-y-8 animate-in fade-in zoom-in-95 duration-500">
-        <button 
+        <Button 
+          variant="outline"
           onClick={() => setPage(isGenerated ? "masak_sendiri" : "home")}
-          className="flex items-center gap-2 text-primary font-semibold hover:underline"
+          className="flex items-center gap-2 text-primary font-bold rounded-full border-primary px-6 hover:bg-secondary/10"
         >
           <ArrowLeft className="w-4 h-4" /> Kembali
-        </button>
+        </Button>
 
         <div className="space-y-6">
           <h1 className="text-4xl font-extrabold text-primary leading-tight">{selectedRecipe.title}</h1>
