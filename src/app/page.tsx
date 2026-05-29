@@ -1,3 +1,4 @@
+
 "use client";
 
 import { useState } from "react";
@@ -12,8 +13,6 @@ import { COMMUNITY_RECIPES, type StaticRecipe, getYouTubeLink } from "@/lib/reci
 import { AntiSultanAlert } from "@/components/AntiSultanAlert";
 import { generateEggRecipe, type GenerateEggRecipeOutput } from "@/ai/flows/generate-egg-recipe";
 import { useToast } from "@/hooks/use-toast";
-import Image from "next/image";
-import { PlaceHolderImages } from "@/lib/placeholder-images";
 
 type PageState = "home" | "masak_sendiri" | "detail_menu";
 
@@ -30,8 +29,6 @@ export default function TelorMuluApp() {
   const [cookingTool, setCookingTool] = useState("Kompor & Teflon");
   const [isSultan, setIsSultan] = useState(false);
   const [isLoading, setIsLoading] = useState(false);
-
-  const logoImage = PlaceHolderImages.find(img => img.id === "app-logo");
 
   const toggleMainIngredient = (id: string) => {
     setMainIngredients(prev => 
@@ -75,17 +72,16 @@ export default function TelorMuluApp() {
   const renderHome = () => (
     <div className="max-w-4xl mx-auto p-6 space-y-8 animate-in fade-in slide-in-from-bottom-4 duration-500">
       <header className="flex flex-col md:flex-row justify-between items-center gap-6">
-        <div className="cursor-pointer transition-transform hover:scale-105" onClick={() => setPage("home")}>
-          {logoImage && (
-            <Image 
-              src={logoImage.imageUrl} 
-              alt={logoImage.description} 
-              width={220} 
-              height={66} 
-              className="object-contain"
-              priority
-            />
-          )}
+        <div 
+          className="cursor-pointer transition-all hover:scale-105 flex items-center gap-3 group" 
+          onClick={() => setPage("home")}
+        >
+          <span className="text-6xl md:text-7xl group-hover:rotate-12 transition-transform duration-300">🍳</span>
+          <div className="flex flex-col -space-y-1 md:-space-y-2">
+            <h1 className="text-3xl md:text-4xl font-black text-primary tracking-tighter leading-tight uppercase">
+              TELOR<br/>MULU!
+            </h1>
+          </div>
         </div>
         <Button 
           onClick={() => setPage("masak_sendiri")}
