@@ -2,9 +2,9 @@
   "placeholderImages": [
     {
       "id": "app-logo",
-      "description": "Logo Telor Mulu - Wajan dan Telur Ceplok",
-      "imageUrl": "https://picsum.photos/seed/telormulu-logo/200/200",
-      "imageHint": "frying pan egg"
+      "description": "Logo Resmi Telor Mulu",
+      "imageUrl": "https://picsum.photos/seed/telormulu-brand-logo/400/120",
+      "imageHint": "restaurant logo"
     }
   ]
 }

@@ -1,3 +1,4 @@
+
 "use client";
 
 import { useState } from "react";
@@ -74,21 +75,19 @@ export default function TelorMuluApp() {
 
   const renderHome = () => (
     <div className="max-w-4xl mx-auto p-6 space-y-8 animate-in fade-in slide-in-from-bottom-4 duration-500">
-      <header className="flex flex-col md:flex-row justify-between items-center gap-4">
-        <div className="flex items-center gap-4 cursor-pointer" onClick={() => setPage("home")}>
+      <header className="flex flex-col md:flex-row justify-between items-center gap-6">
+        <div className="cursor-pointer transition-transform hover:scale-105" onClick={() => setPage("home")}>
           {logoImage && (
             <Image 
               src={logoImage.imageUrl} 
               alt={logoImage.description} 
-              width={80} 
-              height={80} 
-              className="rounded-full border-2 border-primary shadow-md"
+              width={250} 
+              height={75} 
+              className="object-contain"
+              priority
               data-ai-hint={logoImage.imageHint}
             />
           )}
-          <h1 className="text-4xl font-black text-primary tracking-tighter uppercase italic">
-            TELOR MULU!
-          </h1>
         </div>
         <Button 
           onClick={() => setPage("masak_sendiri")}
@@ -99,7 +98,10 @@ export default function TelorMuluApp() {
       </header>
 
       <section className="space-y-4">
-        <h2 className="text-xl font-semibold text-primary/80">Menu Komunitas Ter-hits</h2>
+        <div className="flex items-center gap-2">
+          <Sparkles className="w-5 h-5 text-secondary" />
+          <h2 className="text-xl font-bold text-primary">Menu Komunitas Ter-hits</h2>
+        </div>
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
           {COMMUNITY_RECIPES.map((recipe) => (
             <Card 
