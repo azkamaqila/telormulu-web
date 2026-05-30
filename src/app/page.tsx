@@ -1,3 +1,4 @@
+
 "use client";
 
 import { useState } from "react";
@@ -74,7 +75,9 @@ export default function TelorMuluApp() {
       <header className="flex flex-col md:flex-row justify-between items-center gap-6">
         <div 
           className="cursor-pointer transition-all hover:scale-105 flex items-center gap-2 group" 
-          onClick={() => setPage("home")}
+          onClick={() => {
+            document.getElementById("kenapa-telor")?.scrollIntoView({ behavior: "smooth" });
+          }}
         >
           <span className="text-6xl md:text-7xl group-hover:rotate-12 transition-transform duration-300">🍳</span>
           <div className="flex flex-col">
@@ -141,7 +144,7 @@ export default function TelorMuluApp() {
       </section>
 
       {/* Romanticizing Telor Section */}
-      <section className="py-12 border-t-2 border-primary/10 space-y-10">
+      <section id="kenapa-telor" className="py-12 border-t-2 border-primary/10 space-y-10 scroll-mt-6">
         <div className="text-center space-y-2">
           <h2 className="text-4xl font-black text-primary tracking-tight flex items-center justify-center gap-3">
             <Heart className="w-8 h-8 fill-primary" /> Kenapa Telor?
