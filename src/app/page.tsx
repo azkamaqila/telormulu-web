@@ -182,8 +182,8 @@ export default function TelorMuluApp() {
               <div className="text-center min-w-[100px] flex-1">
                 <span className="text-4xl font-bold">
                   {eggsCount}
-                  {eggsCount === 6 && "!"}
-                  {eggsCount === 7 && "!?"}
+                  {eggsCount === 6 && " !"}
+                  {eggsCount === 7 && " !?"}
                 </span>
                 <span className="block text-xs font-bold uppercase tracking-widest mt-1">BUTIR</span>
               </div>

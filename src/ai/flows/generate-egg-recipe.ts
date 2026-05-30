@@ -1,8 +1,8 @@
 'use server';
 /**
- * @fileOverview A Genkit flow for generating unique and detailed egg recipes.
+ * @fileOverview A Genkit flow for generating unique and detailed telor recipes.
  *
- * - generateEggRecipe - A function that handles the egg recipe generation process.
+ * - generateEggRecipe - A function that handles the telor recipe generation process.
  * - GenerateEggRecipeInput - The input type for the generateEggRecipe function.
  * - GenerateEggRecipeOutput - The return type for the generateEggRecipe function.
  */

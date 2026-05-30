@@ -21,7 +21,7 @@ export const COMMUNITY_RECIPES: StaticRecipe[] = [
     ingredients: ['2 butir telor ayam', '2 siung bawang putih cincang', '3 buah cabai rawit iris', '2 sdm kecap manis', '1 sdm minyak goreng'],
     tools: ['Teflon', 'Spatula', 'Wadah kecil'],
     ingredientsSummary: '🥚🥚🧄🌶️ Legend & Simpel',
-    stepsMarkdown: `1. Siapkan bumbu siram: Campurkan kecap manis, bawang putih cincang, dan cabai rawit dalam wadah kecil.
+    stepsMarkdown: `1. Siapkan bumbu siram: Campurkan kecap manis, bawang putih cincang, and cabai rawit dalam wadah kecil.
 2. Panaskan minyak di teflon dengan api sedang cenderung besar agar pinggiran telor garing.
 3. Ceplok 2 butir telor. Biarkan bagian tepi telor menjadi garing kecokelatan namun kuning telor tetap setengah matang.
 4. Tuangkan campuran bumbu kecap tepat di atas telor yang sedang digoreng.
@@ -82,7 +82,7 @@ export const COMMUNITY_RECIPES: StaticRecipe[] = [
     stepsMarkdown: `1. Kocok lepas 2 butir telor dalam mangkuk tahan panas.
 2. Campurkan air hangat, kecap asin, and merica. Aduk perlahan agar tidak terlalu banyak buih.
 3. Masukkan irisan daun bawang.
-4. Masukkan mangkuk ke dalam rice cooker saat nasi sedang dimasak (stengah matang) atau gunakan fungsi "Steam".
+4. Masukkan mangkuk ke dalam rice cooker saat nasi sedang dimasak (setengah matang) atau gunakan fungsi "Steam".
 5. Kukus selama 10-15 menit hingga tekstur telor set seperti puding.`,
     videoUrl: 'https://www.youtube.com/embed/oG06m69I_hQ',
     cookTime: '15 menit',
