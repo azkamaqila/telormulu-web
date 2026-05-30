@@ -237,7 +237,7 @@ export default function TelorMuluApp() {
 
           {/* Section 3: Tools */}
           <div className="space-y-4">
-            <Label className="text-lg font-bold">Pake Alat Apa?</Label>
+            <Label className="text-lg font-bold">Masak Pake Apa?</Label>
             <RadioGroup value={cookingTool} onValueChange={setCookingTool} className="grid grid-cols-1 sm:grid-cols-3 gap-4">
               {["Kompor & Teflon", "Rice Cooker", "Setrikaan (Nekat)"].map((tool) => (
                 <div key={tool} className={`flex items-center justify-center p-3 border-2 rounded-xl cursor-pointer transition-all ${cookingTool === tool ? 'bg-secondary border-primary shadow-md scale-105' : 'bg-white border-primary/20 hover:border-primary/50'}`} onClick={() => setCookingTool(tool)}>
