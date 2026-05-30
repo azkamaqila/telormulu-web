@@ -28,7 +28,7 @@ const GenerateEggRecipeOutputSchema = z.object({
   toolsUsed: z.array(z.string()).describe('A list of cooking tools required for this specific recipe.'),
   stepsMarkdown: z
     .string()
-    .describe('Detailed, step-by-step cooking instructions. Use simple numbered lists (1., 2., etc.) and do NOT use markdown symbols like # or * for headings or emphasis.'),
+    .describe('Detailed, step-by-step cooking instructions. Use simple numbered lists (1., 2., etc.). Each step MUST be on its own line with a double newline between steps. Do NOT use markdown symbols like # or * for headings or emphasis.'),
 });
 export type GenerateEggRecipeOutput = z.infer<typeof GenerateEggRecipeOutputSchema>;
 
@@ -55,7 +55,9 @@ Alat yang Dimiliki: {{#each cookingTools}}{{{this}}}{{#unless @last}}, {{/unless
 2. **Cook Time**: Accurate estimation.
 3. **Ingredients List**: Precise list with measurements.
 4. **Tools Used**: List tools needed.
-5. **Steps**: Provide detailed instructions. Use simple numbering (1. 2. 3.). IMPORTANT: Do NOT use any # symbols for headings or * symbols for bold/italic. Just use plain text with numbering.
+5. **Steps**: Provide detailed instructions. Use simple numbering (1. 2. 3.). 
+IMPORTANT: Each step MUST be on a NEW LINE. Press Enter twice between steps.
+Do NOT use any # symbols for headings or * symbols for bold/italic. Just use plain text with numbering.
 
 Respond strictly in JSON format according to the output schema.`,
 });

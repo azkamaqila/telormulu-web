@@ -1,4 +1,3 @@
-
 "use client";
 
 import { useState } from "react";
@@ -337,6 +336,9 @@ export default function TelorMuluApp() {
 
     const cookTime = 'cookTime' in selectedRecipe ? selectedRecipe.cookTime : '15 menit';
 
+    // Regex to split by newline OR by step numbers (e.g., "2. ") if they are smashed together
+    const steps = selectedRecipe.stepsMarkdown.split(/\n|(?=\d+\.\s)/).filter(s => s.trim() !== "");
+
     return (
       <div className="max-w-5xl mx-auto p-6 space-y-8 animate-in fade-in zoom-in-95 duration-500">
         <Button 
@@ -398,9 +400,9 @@ export default function TelorMuluApp() {
               <h2 className="text-2xl font-bold text-primary mb-6 flex items-center gap-2">
                 <ChefHat className="w-6 h-6" /> Cara Masak
               </h2>
-              <div className="recipe-markdown text-lg leading-relaxed text-black/90">
-                {selectedRecipe.stepsMarkdown.split('\n').map((line, i) => (
-                  <p key={i} className={line.trim() === "" ? "h-2" : ""}>{line}</p>
+              <div className="recipe-markdown text-lg leading-relaxed text-black/90 space-y-4">
+                {steps.map((line, i) => (
+                  <p key={i} className="mb-4">{line.trim()}</p>
                 ))}
               </div>
             </div>
