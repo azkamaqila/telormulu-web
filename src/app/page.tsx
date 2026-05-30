@@ -196,7 +196,7 @@ export default function TelorMuluApp() {
 
           {/* Section 2: Main Ingredients */}
           <div className="space-y-4">
-            <Label className="text-lg font-bold">Bahan Tambahan (Ala Kosan)</Label>
+            <Label className="text-lg font-bold">Bahan Tambahan</Label>
             <div className="grid grid-cols-2 sm:grid-cols-3 gap-4">
               {["Kecap", "Bawang Merah", "Garam", "Cabai", "Mie Instan"].map((item) => (
                 <div key={item} className="flex items-center space-x-2 bg-white border border-primary/20 p-3 rounded-lg hover:bg-secondary/5 transition-colors cursor-pointer" onClick={() => toggleMainIngredient(item)}>
