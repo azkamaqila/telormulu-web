@@ -92,11 +92,6 @@ export default function TelorMuluApp() {
         </Button>
       </header>
 
-      <div className="text-center py-4 border-y-2 border-primary/10">
-        <h2 className="text-3xl font-black text-primary tracking-tight">BUKU MENU PERTELORAN 🥚</h2>
-        <div className="h-1.5 w-32 bg-secondary mx-auto mt-1 rounded-full" />
-      </div>
-
       <section className="space-y-4">
         <div className="flex items-center gap-2">
           <h2 className="text-xl font-bold text-primary">🥚 TOP 10 Masakan Telur Trending di Indonesia 🇮🇩</h2>
@@ -156,6 +151,11 @@ export default function TelorMuluApp() {
       >
         <ArrowLeft className="w-4 h-4" /> Balik ke Menu Utama
       </Button>
+
+      <div className="text-center py-4 border-y-2 border-primary/10">
+        <h2 className="text-3xl font-black text-primary tracking-tight">BUKU MENU PERTELORAN 🥚</h2>
+        <div className="h-1.5 w-32 bg-secondary mx-auto mt-1 rounded-full" />
+      </div>
 
       <Card className="border-2 border-primary shadow-2xl bg-white overflow-hidden">
         <div className="bg-primary text-white p-6">
