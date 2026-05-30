@@ -204,8 +204,6 @@ export default function TelorMuluApp() {
           <p className="text-white/80 italic text-sm">Pas-in dulu sama apa aja yang loe punya.</p>
         </div>
         <CardContent className="p-8 space-y-8">
-          {isSultan && <AntiSultanAlert />}
-
           {/* Section 1: Eggs Count */}
           <div className="space-y-4">
             <Label className="text-2xl font-bold block text-center">Stok Telor yang Loe Punya!</Label>
@@ -296,6 +294,8 @@ export default function TelorMuluApp() {
               ))}
             </RadioGroup>
           </div>
+
+          {isSultan && <AntiSultanAlert />}
 
           <Button 
             className="w-full bg-primary hover:bg-primary/90 text-white font-bold py-8 text-xl rounded-2xl border-2 border-primary shadow-lg transition-transform active:scale-95 disabled:opacity-50"
