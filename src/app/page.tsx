@@ -1,3 +1,4 @@
+
 "use client";
 
 import { useState } from "react";
@@ -37,7 +38,13 @@ export default function TelorMuluApp() {
   };
 
   const handleManualCook = async () => {
-    const sultanWords = ["wagyu", "caviar", "truffle", "lobster", "foie gras"];
+    const sultanWords = [
+      "wagyu", "caviar", "truffle", "lobster", "foie gras", 
+      "saffron", "abalone", "king crab", "matsutake", 
+      "bird nest", "sarang burung", "emas", "gold leaf", 
+      "iberico", "bluefin", "uni", "toro", "porcini", "beluga",
+      "king salmon", "shark fin", "sirip hiu", "oyster"
+    ];
     const inputLower = additionalIngredients.toLowerCase();
     
     if (sultanWords.some(word => inputLower.includes(word))) {
