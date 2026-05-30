@@ -171,7 +171,7 @@ export default function TelorMuluApp() {
         
         <div className="flex flex-col items-center justify-center pt-4 gap-6">
           <span className="text-4xl">🥚✨🍳</span>
-          <div className="text-muted-foreground/70 text-sm font-bold tracking-[0.2em] uppercase">
+          <div className="text-muted-foreground/70 text-base font-bold tracking-[0.2em] lowercase">
             @jayuk.id
           </div>
         </div>
@@ -218,9 +218,7 @@ export default function TelorMuluApp() {
               </Button>
               <div className="text-center min-w-[100px] flex-1">
                 <span className="text-4xl font-bold">
-                  {eggsCount}
-                  {eggsCount === 6 && " !"}
-                  {eggsCount === 7 && " !?"}
+                  {eggsCount === 6 ? "6 !" : eggsCount === 7 ? "7 !?" : eggsCount}
                 </span>
                 <span className="block text-xs font-bold uppercase tracking-widest mt-1">BUTIR</span>
               </div>
@@ -303,11 +301,11 @@ export default function TelorMuluApp() {
             disabled={isLoading}
           >
             {isLoading ? (
-              <span className="flex items-center gap-2">
+              <span className="flex items-center gap-2 text-white">
                 <Loader2 className="w-6 h-6 animate-spin" /> Lagi tanya Chef AI...
               </span>
             ) : (
-              <span className="flex items-center gap-2">
+              <span className="flex items-center gap-2 text-white">
                 <Sparkles className="w-6 h-6" /> Gas Masak!
               </span>
             )}
