@@ -257,7 +257,7 @@ export default function TelorMuluApp() {
           </div>
 
           <Button 
-            className="w-full bg-secondary hover:bg-secondary/90 text-primary font-bold py-8 text-xl rounded-2xl border-2 border-primary shadow-lg transition-transform active:scale-95 disabled:opacity-50"
+            className="w-full bg-secondary hover:bg-secondary/90 text-white font-bold py-8 text-xl rounded-2xl border-2 border-primary shadow-lg transition-transform active:scale-95 disabled:opacity-50"
             onClick={handleManualCook}
             disabled={isLoading}
           >
