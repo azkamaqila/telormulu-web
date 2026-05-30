@@ -181,12 +181,12 @@ export default function TelorMuluApp() {
               </Button>
               <div className="text-center min-w-[100px] flex-1">
                 <span className="text-4xl font-bold">{eggsCount}</span>
-                <span className="block text-xs font-bold uppercase tracking-widest mt-1">Butir</span>
+                <span className="block text-xs font-bold uppercase tracking-widest mt-1">Max. 7 Butir</span>
               </div>
               <Button 
                 variant="outline" 
                 size="icon" 
-                onClick={(e) => { e.stopPropagation(); setEggsCount(Math.min(10, eggsCount + 1)); }}
+                onClick={(e) => { e.stopPropagation(); setEggsCount(Math.min(7, eggsCount + 1)); }}
                 className="rounded-full border-primary text-primary hover:bg-primary hover:text-white"
               >
                 <Plus className="w-5 h-5" />
