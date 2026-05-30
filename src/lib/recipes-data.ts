@@ -17,192 +17,191 @@ export interface StaticRecipe {
 export const COMMUNITY_RECIPES: StaticRecipe[] = [
   {
     id: 'ceplok-pontianak',
-    title: 'Telor Ceplok Kecap Pontianak',
-    ingredients: ['2 butir telor ayam', '2 siung bawang putih cincang', '3 buah cabai rawit iris', '2 sdm kecap manis', '1 sdm minyak goreng'],
-    tools: ['Teflon', 'Spatula', 'Wadah kecil'],
-    ingredientsSummary: '🥚🥚🧄🌶️ Legend & Simpel',
-    stepsMarkdown: `1. Siapkan bumbu siram: Campurkan kecap manis, bawang putih cincang, and cabai rawit dalam wadah kecil.
-2. Panaskan minyak di teflon dengan api sedang cenderung besar agar pinggiran telor garing.
-3. Ceplok 2 butir telor. Biarkan bagian tepi telor menjadi garing kecokelatan namun kuning telor tetap setengah matang.
-4. Tuangkan campuran bumbu kecap tepat di atas telor yang sedang digoreng.
-5. Masak selama 30 detik hingga bumbu mendidih and meresap. Angkat segera.`,
+    title: 'Telor Ceplok Kecap Bawang Putih',
+    ingredients: ['2 butir telor ayam', '2 siung bawang putih cincang halus', '3 buah cabai rawit iris', '2 sdm kecap manis kualitas tinggi', '1 sdm minyak goreng'],
+    tools: ['Wajan Anti Lengket (Teflon)', 'Spatula', 'Wadah kecil'],
+    ingredientsSummary: '🥚🥚🧄🌶️ Perpaduan Gurih & Manis',
+    stepsMarkdown: `1. Persiapan Bumbu Siram: Campurkan kecap manis, bawang putih yang telah dicincang halus, dan irisan cabai rawit ke dalam wadah kecil. Aduk hingga rata agar aroma bawang putih keluar.
+2. Pemanasan Wajan: Panaskan minyak di atas teflon menggunakan api sedang. Pastikan minyak sudah cukup panas sebelum telor dimasukkan agar menghasilkan pinggiran yang renyah (crispy edges).
+3. Teknik Menggoreng: Pecahkan telor satu per satu ke dalam wajan. Biarkan bagian putih telor mengeras dan membentuk tekstur garing kecokelatan di bagian tepi, namun pastikan kuning telor tetap setengah matang untuk tekstur yang lebih creamy.
+4. Karamelisasi: Tuangkan campuran bumbu kecap tepat di atas permukaan telor yang sedang digoreng. Biarkan selama kurang lebih 30-45 detik hingga bumbu mendidih dan sedikit mengental (karamelisasi) di permukaan telor.
+5. Penyajian: Matikan api, angkat telor secara perlahan menggunakan spatula, dan sajikan segera di atas nasi hangat.`,
     videoUrl: 'https://www.youtube.com/embed/jZf-8w9C0_A',
     cookTime: '5 menit',
     servings: '1 orang',
-    chefName: 'Mami Kost',
+    chefName: 'Chef Mami',
     chefAvatar: 'https://picsum.photos/seed/chef2/100/100',
     imageUrl: 'https://picsum.photos/seed/egg2/400/300',
     eggsCount: 2
   },
   {
     id: 'dadar-gobal-gabul',
-    title: 'Telor Dadar Gobal-Gabul',
-    ingredients: ['3 butir telor ayam', '3 batang daun bawang iris', '5 siung bawang merah iris', '4 buah cabai rawit iris', '1/2 sdt garam & kaldu'],
-    tools: ['Mangkuk pengocok', 'Teflon', 'Spatula'],
-    ingredientsSummary: '🥚🥚🥚🌿 Cabai Melimpah',
-    stepsMarkdown: `1. Pecahkan 3 butir telor ke dalam mangkuk.
-2. Masukkan irisan daun bawang, bawang merah, and cabai rawit yang banyak. Tambahkan garam and kaldu.
-3. Kocok telor dengan kuat sampai berbusa agar hasilnya mengembang and teksturnya "gobal-gabul".
-4. Panaskan minyak yang agak banyak di teflon dengan api sedang.
-5. Tuang adonan telor, ratakan. Kecilkan api sedikit agar bagian dalam matang tanpa gosong di luar.
-6. Balik telor saat bagian bawah sudah kokoh, masak hingga kedua sisi garing.`,
+    title: 'Telor Dadar Tebal Spesial Daun Bawang',
+    ingredients: ['3 butir telor ayam segar', '3 batang daun bawang (iris halus)', '5 siung bawang merah (iris tipis)', '4 buah cabai rawit (iris halus)', '1/2 sdt garam & kaldu jamur'],
+    tools: ['Mangkuk pengocok', 'Teflon diameter 18-20cm', 'Spatula'],
+    ingredientsSummary: '🥚🥚🥚🌿 Tekstur Padat & Berempah',
+    stepsMarkdown: `1. Pengocokan Udara: Pecahkan 3 butir telor ke dalam mangkuk besar. Masukkan garam dan kaldu jamur. Kocok telor dengan kecepatan tinggi selama 1-2 menit hingga benar-benar berbusa dan mengembang. Udara yang terjebak di dalamnya akan membuat dadar lebih tebal.
+2. Persiapan Bahan Isian: Masukkan irisan daun bawang, bawang merah, dan cabai rawit ke dalam adonan telor. Aduk perlahan agar isian tersebar merata.
+3. Teknik Penggorengan: Panaskan minyak dalam jumlah yang cukup banyak di teflon menggunakan api sedang. Minyak yang panas sangat krusial untuk membuat telor langsung mengembang saat dituang.
+4. Pematangan Merata: Tuangkan seluruh adonan telor. Setelah bagian bawah mulai mengeras, kecilkan api ke posisi rendah. Tutup teflon selama 2-3 menit agar bagian dalam matang sempurna tanpa menghanguskan bagian luar.
+5. Balik Dadar: Balik telor dengan hati-hati saat bagian bawah sudah berwarna cokelat keemasan. Masak sisi lainnya hingga matang merata. Angkat dan tiriskan sebelum disajikan.`,
     videoUrl: 'https://www.youtube.com/embed/S26M7M-0nF8',
     cookTime: '10 menit',
     servings: '2 orang',
-    chefName: 'Chef Pasrah',
+    chefName: 'Chef Professional',
     chefAvatar: 'https://picsum.photos/seed/chef1/100/100',
     imageUrl: 'https://picsum.photos/seed/egg1/400/300',
     eggsCount: 3
   },
   {
     id: 'orak-arik-semalam',
-    title: 'Orak-Arik Telor Sisa Semalam',
-    ingredients: ['2 butir telor ayam', '1 piring nasi sisa semalam (opsional)', '2 buah sosis iris', '1 sdm kecap manis', '1/2 sdt garam'],
-    tools: ['Wajan', 'Sutil'],
-    ingredientsSummary: '🥚🥚🌭 Pemanfaatan Logistik',
-    stepsMarkdown: `1. Panaskan sedikit minyak di wajan. Tumis irisan sosis hingga sedikit berubah warna.
-2. Pecahkan 2 butir telor langsung ke wajan. Biarkan 5 detik lalu orak-arik hingga hancur kasar.
-3. Masukkan nasi sisa semalam jika ada, atau cukup sosis and telor saja.
-4. Tambahkan kecap manis and garam. Aduk cepat dengan api besar agar aroma "smoky" keluar.
-5. Masak hingga telor benar-benar kering and bumbu merata.`,
+    title: 'Orak-Arik Telor Sosis Pedas',
+    ingredients: ['2 butir telor ayam', '2 buah sosis sapi/ayam (iris serong)', '1 siung bawang putih cincang', '1 sdm kecap manis', '1/2 sdt garam & lada hitam'],
+    tools: ['Wajan', 'Sutil (Turner)'],
+    ingredientsSummary: '🥚🥚🌭 Praktis & Bergizi',
+    stepsMarkdown: `1. Tumis Aroma: Panaskan 1 sdm minyak di atas wajan dengan api sedang. Masukkan bawang putih cincang, tumis hingga mengeluarkan aroma harum dan berwarna kecokelatan ringan.
+2. Pengolahan Protein: Masukkan irisan sosis. Masak hingga sisi sosis sedikit berubah warna dan teksturnya menjadi agak kencang.
+3. Teknik Scrambling: Pecahkan 2 butir telor langsung ke tengah wajan. Diamkan selama kurang lebih 10 detik hingga bagian bawah telor sedikit set, kemudian gunakan sutil untuk mengaduk secara kasar (orak-arik) hingga terbentuk gumpalan telor yang bertekstur.
+4. Bumbu & Karakter: Tambahkan kecap manis, garam, dan lada hitam. Tingkatkan api menjadi besar sejenak, aduk cepat selama 30 detik. Teknik ini akan memberikan sedikit aroma "smoky" (wok hei) pada masakan.
+5. Penyajian Akhir: Segera angkat masakan agar telor tidak menjadi terlalu kering (overcooked). Sajikan sebagai pendamping nasi atau roti.`,
     videoUrl: 'https://www.youtube.com/embed/6iW4J2-iUvE',
     cookTime: '8 menit',
     servings: '1 orang',
-    chefName: 'Mahasiswa Abadi',
+    chefName: 'Chef Spesialis Sarapan',
     chefAvatar: 'https://picsum.photos/seed/chef3/100/100',
     imageUrl: 'https://picsum.photos/seed/egg3/400/300',
     eggsCount: 2
   },
   {
     id: 'kukus-rice-cooker',
-    title: 'Telor Kukus Rice Cooker',
-    ingredients: ['2 butir telor ayam', '150ml air hangat', '1 batang daun bawang iris', '1 sdt kecap asin', '1/4 sdt merica'],
-    tools: ['Mangkuk tahan panas', 'Rice Cooker'],
-    ingredientsSummary: '🥚🥚🍶 Lembut Tanpa Minyak',
-    stepsMarkdown: `1. Kocok lepas 2 butir telor dalam mangkuk tahan panas.
-2. Campurkan air hangat, kecap asin, and merica. Aduk perlahan agar tidak terlalu banyak buih.
-3. Masukkan irisan daun bawang.
-4. Masukkan mangkuk ke dalam rice cooker saat nasi sedang dimasak (setengah matang) atau gunakan fungsi "Steam".
-5. Kukus selama 10-15 menit hingga tekstur telor set seperti puding.`,
+    title: 'Telor Kukus Lembut Spesial',
+    ingredients: ['2 butir telor ayam kualitas baik', '150ml kaldu cair hangat', '1 batang daun bawang (iris halus)', '1 sdt kecap asin', 'Sedikit minyak wijen'],
+    tools: ['Mangkuk keramik/tahan panas', 'Rice Cooker dengan tray pengukus'],
+    ingredientsSummary: '🥚🥚🍶 Tekstur Halus Seperti Puding',
+    stepsMarkdown: `1. Pencampuran Adonan: Kocok lepas 2 butir telor dalam mangkuk tahan panas secara perlahan agar tidak banyak buih terbentuk.
+2. Rasio Kaldu: Campurkan kaldu cair hangat (suhu suam-suam kuku) dengan kecap asin dan minyak wijen. Tuangkan secara bertahap ke dalam kocokan telor sambil terus diaduk perlahan.
+3. Teknik Penyaringan (Opsional tapi Direkomendasikan): Saring adonan menggunakan saringan halus untuk memastikan tidak ada gumpalan telor putih yang tersisa, sehingga hasil akhir akan mulus seperti puding.
+4. Proses Pengukusan: Masukkan mangkuk ke dalam rice cooker. Gunakan fungsi "Steam" atau letakkan di atas nasi yang sedang dimasak (pastikan nasi sudah hampir matang). Tutup mangkuk dengan aluminium foil agar air uap tidak menetes ke dalam adonan.
+5. Pematangan: Kukus selama 12-15 menit. Cek kekentalan dengan menggoyang mangkuk sedikit; jika bagian tengah hanya sedikit bergoyang (jiggle), telor sudah matang sempurna. Taburkan daun bawang di atasnya.`,
     videoUrl: 'https://www.youtube.com/embed/oG06m69I_hQ',
     cookTime: '15 menit',
     servings: '1 orang',
-    chefName: 'Anak Rantau Sehat',
+    chefName: 'Chef Kuliner Sehat',
     chefAvatar: 'https://picsum.photos/seed/chef9/100/100',
     imageUrl: 'https://picsum.photos/seed/egg9/400/300',
     eggsCount: 2
   },
   {
     id: 'dadar-asam-manis',
-    title: 'Telor Dadar Kuah Asam Manis',
-    ingredients: ['2 butir telor ayam', '3 sdm saus tomat', '1 sdm saus sambal', '1/2 buah bawang bombay iris', '100ml air'],
-    tools: ['Teflon', 'Panci kecil (untuk saus)', 'Sutil'],
-    ingredientsSummary: '🥚🥚🍅 Sauce Magic',
-    stepsMarkdown: `1. Goreng 2 butir telor menjadi dadar krispi standar. Sisihkan and potong menjadi 4 bagian.
-2. Buat saus: Tumis bawang bombay hingga layu.
-3. Masukkan saus tomat, saus sambal, and air. Aduk hingga mendidih and mengental.
-4. Koreksi rasa dengan sedikit gula and garam.
-5. Siramkan saus asam manis di atas potongan telor dadar sebelum disajikan.`,
+    title: 'Telor Dadar Siram Saus Asam Manis',
+    ingredients: ['2 butir telor ayam', '3 sdm saus tomat', '1 sdm saus sambal', '1/2 buah bawang bombay (iris memanjang)', '100ml air bersih'],
+    tools: ['Teflon', 'Panci saus kecil', 'Spatula'],
+    ingredientsSummary: '🥚🥚🍅 Citarasa Oriental Modern',
+    stepsMarkdown: `1. Pembuatan Dadar: Buat telor dadar krispi menggunakan 2 butir telor. Goreng hingga matang dan berwarna cokelat keemasan. Angkat, tiriskan, dan potong menjadi beberapa bagian sesuai selera. Letakkan di piring saji.
+2. Penumisan Saus: Di panci kecil, tumis bawang bombay dengan sedikit minyak hingga layu dan aromanya harum.
+3. Pengentalan Saus: Masukkan saus tomat, saus sambal, dan air. Aduk hingga mendidih. Jika ingin saus yang lebih kental, Anda bisa menambahkan sedikit larutan maizena.
+4. Koreksi Rasa: Tambahkan sedikit gula pasir dan garam untuk menyeimbangkan rasa asam dari saus tomat. Masak hingga saus mencapai kekentalan yang diinginkan.
+5. Finishing: Siramkan saus asam manis yang masih panas secara merata ke atas potongan telor dadar. Sajikan segera selagi hangat agar tekstur dadar tetap terjaga.`,
     videoUrl: 'https://www.youtube.com/embed/X99M-07_1A4',
     cookTime: '12 menit',
     servings: '1 orang',
-    chefName: 'Chef Chinese Food Palsu',
+    chefName: 'Chef Fusion',
     chefAvatar: 'https://picsum.photos/seed/chef7/100/100',
     imageUrl: 'https://picsum.photos/seed/egg7/400/300',
     eggsCount: 2
   },
   {
     id: 'ceplok-balado-iris',
-    title: 'Telor Ceplok Balado Iris',
-    ingredients: ['2 butir telor ayam', '5 buah cabai merah iris serong', '3 siung bawang merah iris', '1 buah tomat potong dadu', '1/2 sdt garam'],
+    title: 'Telor Ceplok Bumbu Balado Iris',
+    ingredients: ['2 butir telor ayam', '5 buah cabai merah (iris serong)', '3 siung bawang merah (iris tipis)', '1 buah tomat merah (potong dadu)', '1/2 sdt garam'],
     tools: ['Wajan', 'Sutil'],
-    ingredientsSummary: '🥚🥚🌶️ Pedas Praktis',
-    stepsMarkdown: `1. Ceplok 2 butir telor hingga matang atau setengah matang sesuai selera. Sisihkan.
-2. Tumis bawang merah and cabai iris hingga layu and harum.
-3. Masukkan potongan tomat, masak hingga tomat hancur and mengeluarkan sari air.
-4. Tambahkan garam and sedikit air jika terlalu kering.
-5. Masukkan kembali telor ceplok, aduk perlahan agar bumbu iris menempel.`,
+    ingredientsSummary: '🥚🥚🌶️ Sensasi Pedas Segar',
+    stepsMarkdown: `1. Penggorengan Telor: Goreng 2 butir telor secara ceplok (mata sapi). Anda bisa memilih tingkat kematangan kuning telor sesuai selera. Sisihkan telor di piring saji.
+2. Penumisan Bumbu Iris: Gunakan sisa minyak menggoreng telor (sekitar 1-2 sdm). Tumis bawang merah hingga layu, kemudian masukkan irisan cabai merah. Masak hingga cabai tidak berbau langu.
+3. Pengolahan Tomat: Masukkan potongan tomat. Tekan-tekan lembut tomat menggunakan sutil hingga mengeluarkan air dan teksturnya hancur menyatu dengan bumbu lainnya.
+4. Seasoning: Tambahkan garam dan sedikit air jika tumisan terlalu kering. Masak hingga bumbu meresap dan tomat membentuk saus kasar yang kental.
+5. Finishing: Letakkan kembali telor ceplok ke dalam wajan, aduk perlahan selama 15 detik agar bumbu menempel sempurna di permukaan telor. Matikan api dan sajikan.`,
     videoUrl: 'https://www.youtube.com/embed/8oF_8O2pW0k',
     cookTime: '10 menit',
     servings: '1 orang',
-    chefName: 'Bang Jago',
+    chefName: 'Chef Masakan Nusantara',
     chefAvatar: 'https://picsum.photos/seed/chef4/100/100',
     imageUrl: 'https://picsum.photos/seed/egg4/400/300',
     eggsCount: 2
   },
   {
     id: 'tamagoyaki-kw',
-    title: 'Tamagoyaki KW (Telor Gulung Teflon)',
-    ingredients: ['2 butir telor ayam', '2 sdm susu cair (opsional)', '1/2 sdt kaldu jamur', 'Sedikit minyak goreng'],
-    tools: ['Teflon anti lengket', 'Spatula/Sumpit', 'Mangkuk'],
-    ingredientsSummary: '🥚🥚🥛 Ala Jepang Versi Kosan',
-    stepsMarkdown: `1. Kocok telor bersama susu cair and kaldu jamur hingga benar-benar rata.
-2. Panaskan teflon dengan api sangat kecil, olesi minyak tipis-tipis menggunakan tisu.
-3. Tuangkan sebagian adonan telor hingga menutupi permukaan teflon.
-4. Saat bagian bawah mulai set tapi atas masih agak basah, gulung telor perlahan ke satu sisi.
-5. Geser gulungan ke pinggir, tuang lagi adonan telor di sisi kosong. Ulangi proses hingga adonan habis.
-6. Tekan-tekan lembut agar bentuknya kotak rapi, angkat and potong-potong.`,
+    title: 'Telor Gulung Jepang (Tamagoyaki)',
+    ingredients: ['2 butir telor ayam', '2 sdm susu cair full cream', '1/2 sdt kaldu jamur', 'Sedikit minyak untuk olesan'],
+    tools: ['Teflon anti lengket (persegi lebih baik)', 'Spatula/Sumpit', 'Mangkuk pengocok'],
+    ingredientsSummary: '🥚🥚🥛 Tekstur Lembut & Estetik',
+    stepsMarkdown: `1. Preparasi Adonan: Kocok telor bersama susu cair dan kaldu jamur. Pastikan adonan benar-benar tercampur rata dan tidak ada bagian putih telor yang menggumpal. Saring adonan untuk hasil yang lebih halus.
+2. Pengaturan Suhu: Panaskan teflon dengan api sangat kecil. Olesi permukaan teflon dengan sedikit minyak menggunakan tisu dapur agar merata dan tidak terlalu berminyak.
+3. Layer Pertama: Tuangkan sekitar 1/4 bagian adonan telor hingga menutupi seluruh permukaan teflon secara tipis. Biarkan hingga bagian bawah set namun bagian atas masih agak basah.
+4. Teknik Menggulung: Gulung telor secara perlahan dari satu sisi ke sisi lainnya menggunakan sumpit atau spatula. Geser gulungan ke salah satu ujung teflon.
+5. Layer Selanjutnya: Olesi kembali sisi kosong teflon dengan sedikit minyak. Tuang lagi sebagian adonan telor, pastikan adonan baru masuk ke bawah gulungan telor sebelumnya agar menyambung. Ulangi proses ini hingga adonan habis.
+6. Pemadatan: Setelah semua adonan tergulung, tekan-tekan lembut gulungan telor di pojok teflon untuk membentuk kotak yang rapi. Angkat, diamkan sebentar, lalu potong-potong dengan pisau tajam.`,
     videoUrl: 'https://www.youtube.com/embed/S_8qK2y466M',
     cookTime: '15 menit',
     servings: '1 orang',
-    chefName: 'Oppa Kosan',
+    chefName: 'Chef Spesialis Bento',
     chefAvatar: 'https://picsum.photos/seed/chef8/100/100',
     imageUrl: 'https://picsum.photos/seed/egg8/400/300',
     eggsCount: 2
   },
   {
     id: 'sarden-telur',
-    title: 'Sarden Telor Orak-Arik',
-    ingredients: ['2 butir telor ayam', '1 kaleng kecil sarden', '2 siung bawang putih iris', '3 buah cabai rawit iris'],
+    title: 'Tumis Sarden Orak-Arik Telor',
+    ingredients: ['2 butir telor ayam', '1 kaleng kecil sarden (pilih varian favorit)', '2 siung bawang putih (iris halus)', '3 buah cabai rawit (iris serong)'],
     tools: ['Wajan', 'Sutil'],
-    ingredientsSummary: '🥚🥚🥫 Protein Double',
-    stepsMarkdown: `1. Tumis bawang putih and cabai rawit hingga harum.
-2. Pecahkan 2 butir telor, orak-arik kasar hingga setengah matang.
-3. Masukkan satu kaleng sarden. Hancurkan ikan sarden jika ingin tekstur yang lebih menyatu dengan telor.
-4. Masak hingga kuah sarden mendidih and meresap ke dalam telor.
-5. Tidak perlu ditambah garam karena sarden biasanya sudah cukup asin.`,
+    ingredientsSummary: '🥚🥚🥫 Tinggi Protein & Praktis',
+    stepsMarkdown: `1. Dasar Aroma: Tumis bawang putih dan cabai rawit dengan 1 sdm minyak hingga harum dan berwarna kuning keemasan.
+2. Scrambling Telor: Pecahkan 2 butir telor ke dalam wajan. Biarkan sebentar hingga bagian bawahnya set, lalu orak-arik secara kasar. Masak hingga telor mencapai tingkat kematangan sekitar 70%.
+3. Integrasi Sarden: Tuangkan seluruh isi kaleng sarden ke dalam wajan. Gunakan sutil untuk membelah ikan sarden menjadi ukuran yang lebih kecil agar bumbu lebih meresap dan tercampur rata dengan telor.
+4. Proses Reduksi: Masak dengan api sedang hingga kuah sarden mendidih dan sedikit menyusut (reduksi). Hal ini akan memperkuat rasa saus sarden pada telor.
+5. Finishing: Koreksi rasa. Biasanya tidak perlu garam tambahan karena saus sarden sudah cukup asin. Sajikan selagi panas dengan nasi putih.`,
     videoUrl: 'https://www.youtube.com/embed/6iW4J2-iUvE',
     cookTime: '10 menit',
     servings: '2 orang',
-    chefName: 'Bu Kost Sayang',
+    chefName: 'Chef Kuliner Praktis',
     chefAvatar: 'https://picsum.photos/seed/chef5/100/100',
     imageUrl: 'https://picsum.photos/seed/egg5/400/300',
     eggsCount: 2
   },
   {
     id: 'omelet-interjunet',
-    title: 'Omelet Mi Interjunet',
-    ingredients: ['2 butir telor ayam', '1 bungkus mi instan goreng', '1 batang daun bawang iris', 'Sedikit kornet (opsional)'],
-    tools: ['Panci (rebus mi)', 'Teflon', 'Spatula'],
-    ingredientsSummary: '🥚🥚 Ramen Kenyang Maksimal',
-    stepsMarkdown: `1. Rebus mi instan hingga matang, tiriskan. Campur dengan bumbu bawaan mi.
-2. Kocok 2 butir telor, masukkan mi yang sudah berbumbu and daun bawang.
-3. Tambahkan kornet jika ada untuk rasa yang lebih mewah.
-4. Panaskan sedikit minyak, tuang adonan mi telor ke teflon.
-5. Masak dengan api kecil agar matang merata. Balik saat satu sisi sudah garing kecokelatan.`,
+    title: 'Martabak Mi Telor Kornet',
+    ingredients: ['2 butir telor ayam', '1 bungkus mi instan goreng', '1 batang daun bawang (iris halus)', '2 sdm kornet sapi'],
+    tools: ['Panci kecil (untuk rebus mi)', 'Teflon diameter 20cm', 'Spatula'],
+    ingredientsSummary: '🥚🥚🍜 Tekstur Garing Luar Lembut Dalam',
+    stepsMarkdown: `1. Persiapan Mi: Rebus mi instan dalam air mendidih hingga mencapai tingkat kematangan "al dente" (jangan terlalu lembek). Tiriskan mi dan campurkan dengan seluruh bumbu bawaan mi instan.
+2. Adonan Utama: Dalam mangkuk, kocok 2 butir telor. Masukkan mi yang sudah berbumbu, irisan daun bawang, dan kornet sapi. Aduk hingga kornet hancur dan tercampur merata dengan telor dan mi.
+3. Teknik Menggoreng: Panaskan 1 sdm minyak di teflon menggunakan api sedang cenderung kecil. Tuangkan seluruh adonan, ratakan hingga membentuk lingkaran sempurna.
+4. Pematangan Perlahan: Masak perlahan hingga bagian bawah benar-benar garing dan berwarna cokelat gelap (namun tidak gosong). Penggunaan api kecil sangat penting agar bagian dalam yang tebal bisa matang sempurna.
+5. Finishing: Balik martabak mi dengan bantuan piring atau spatula lebar. Masak sisi sebaliknya hingga garing. Potong-potong seperti pizza dan sajikan dengan saus sambal.`,
     videoUrl: 'https://www.youtube.com/embed/oG06m69I_hQ',
     cookTime: '10 menit',
     servings: '1 orang',
-    chefName: 'Master Mie',
+    chefName: 'Chef Kreasi Mi',
     chefAvatar: 'https://picsum.photos/seed/chef10/100/100',
     imageUrl: 'https://picsum.photos/seed/egg10/400/300',
     eggsCount: 2
   },
   {
     id: 'rendang-instan',
-    title: 'Telor Bumbu Rendang Instan',
-    ingredients: ['4 butir telor rebus', '1 sachet bumbu rendang instan', '100ml air', '1 sdm minyak goreng'],
+    title: 'Telor Rebus Goreng Bumbu Rendang',
+    ingredients: ['4 butir telor (rebus dan kupas)', '1 sachet bumbu rendang instan premium', '100ml air santan/air', '1 sdm minyak goreng'],
     tools: ['Panci kecil/Wajan', 'Sendok sayur'],
-    ingredientsSummary: '🥚🥚🥚🥚🥥 Rasa Resto Padang',
-    stepsMarkdown: `1. Goreng telor rebus yang sudah dikupas hingga kulitnya sedikit keriting kecokelatan. Sisihkan.
-2. Tumis bumbu rendang instan dengan sedikit minyak hingga aromanya keluar.
-3. Masukkan air, aduk rata hingga mendidih.
-4. Masukkan telor rebus goreng. Kecilkan api.
-5. Masak (simmer) hingga kuah rendang menyusut and bumbu meresap sempurna ke dalam telor.`,
+    ingredientsSummary: '🥚🥚🥚🥚🥥 Citarasa Mewah Tradisional',
+    stepsMarkdown: `1. Tekstur Telor: Panaskan sedikit minyak dalam wajan. Goreng telor rebus yang sudah dikupas hingga seluruh permukaannya berubah menjadi kecokelatan dan bertekstur keriting (deep fried). Teknik ini membuat bumbu rendang lebih mudah menempel. Angkat dan sisihkan.
+2. Penumisan Bumbu: Tumis bumbu rendang instan dengan sedikit minyak sisa menggoreng telor hingga aromanya keluar dan warna bumbu sedikit lebih gelap.
+3. Simmering: Tuangkan air atau santan cair ke dalam bumbu. Aduk hingga rata dan biarkan mendidih.
+4. Proses Meresap: Masukkan telor rebus goreng ke dalam bumbu. Kecilkan api ke posisi paling rendah. Masak (simmer) sambil sesekali diaduk agar bumbu tidak gosong di dasar panci.
+5. Finishing: Masak terus hingga cairan menyusut dan bumbu rendang menjadi kental serta mengeluarkan minyak (dedak rendang). Pastikan seluruh permukaan telor terbalut bumbu dengan tebal. Sajikan.`,
     videoUrl: 'https://www.youtube.com/embed/kYj6oN_fKTM',
     cookTime: '20 menit',
     servings: '2 orang',
-    chefName: 'Uni Rancak',
+    chefName: 'Chef Masakan Padang',
     chefAvatar: 'https://picsum.photos/seed/chef6/100/100',
     imageUrl: 'https://picsum.photos/seed/egg6/400/300',
     eggsCount: 4
@@ -211,15 +210,15 @@ export const COMMUNITY_RECIPES: StaticRecipe[] = [
 
 export const getYouTubeLink = (title: string) => {
   const t = title.toLowerCase();
-  if (t.includes('pontianak') || t.includes('ceplok kecap')) return 'https://www.youtube.com/embed/jZf-8w9C0_A';
-  if (t.includes('gobal-gabul') || t.includes('dadar padang')) return 'https://www.youtube.com/embed/S26M7M-0nF8';
-  if (t.includes('orak-arik') && t.includes('semalam')) return 'https://www.youtube.com/embed/6iW4J2-iUvE';
-  if (t.includes('kukus') || t.includes('rice cooker')) return 'https://www.youtube.com/embed/oG06m69I_hQ';
+  if (t.includes('bawang putih') || t.includes('ceplok kecap')) return 'https://www.youtube.com/embed/jZf-8w9C0_A';
+  if (t.includes('tebal') || t.includes('dadar padang')) return 'https://www.youtube.com/embed/S26M7M-0nF8';
+  if (t.includes('orak-arik') && t.includes('sosis')) return 'https://www.youtube.com/embed/6iW4J2-iUvE';
+  if (t.includes('kukus') || t.includes('soft steam')) return 'https://www.youtube.com/embed/oG06m69I_hQ';
   if (t.includes('asam manis')) return 'https://www.youtube.com/embed/X99M-07_1A4';
   if (t.includes('balado')) return 'https://www.youtube.com/embed/8oF_8O2pW0k';
-  if (t.includes('tamagoyaki') || t.includes('gulung teflon')) return 'https://www.youtube.com/embed/S_8qK2y466M';
+  if (t.includes('tamagoyaki') || t.includes('jepang')) return 'https://www.youtube.com/embed/S_8qK2y466M';
   if (t.includes('sarden')) return 'https://www.youtube.com/embed/6iW4J2-iUvE';
-  if (t.includes('interjunet') || t.includes('mie')) return 'https://www.youtube.com/embed/oG06m69I_hQ';
+  if (t.includes('mi telor') || t.includes('martabak')) return 'https://www.youtube.com/embed/oG06m69I_hQ';
   if (t.includes('rendang')) return 'https://www.youtube.com/embed/kYj6oN_fKTM';
   return 'https://www.youtube.com/embed/oG06m69I_hQ'; // Default fallback
 };
