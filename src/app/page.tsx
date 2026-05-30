@@ -8,7 +8,7 @@ import { Checkbox } from "@/components/ui/checkbox";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { RadioGroup, RadioGroupItem } from "@/components/ui/radio-group";
-import { Plus, Minus, ChefHat, ArrowLeft, Youtube, Sparkles, Loader2, Clock, Wrench, Utensils, ShoppingBasket, Search, Heart } from "lucide-react";
+import { Plus, Minus, ChefHat, ArrowLeft, Youtube, Sparkles, Loader2, Clock, Wrench, Utensils, ShoppingBasket, Search } from "lucide-react";
 import { COMMUNITY_RECIPES, type StaticRecipe, getYouTubeLink } from "@/lib/recipes-data";
 import { AntiSultanAlert } from "@/components/AntiSultanAlert";
 import { generateEggRecipe, type GenerateEggRecipeOutput } from "@/ai/flows/generate-egg-recipe";
@@ -180,7 +180,7 @@ export default function TelorMuluApp() {
         
         <div className="flex flex-col items-center justify-center pt-4 gap-6">
           <span className="text-4xl">🥚✨🍳</span>
-          <div className="text-muted-foreground/70 text-sm font-bold tracking-[0.2em] lowercase">
+          <div className="text-muted-foreground/70 text-base font-bold tracking-[0.2em] lowercase">
             @jayuk.id
           </div>
         </div>
@@ -302,23 +302,25 @@ export default function TelorMuluApp() {
             </RadioGroup>
           </div>
 
-          {isSultan && <AntiSultanAlert />}
+          <div className="flex flex-col gap-4">
+            {isSultan && <AntiSultanAlert />}
 
-          <Button 
-            className="w-full bg-primary hover:bg-primary/90 text-white font-bold py-8 text-xl rounded-2xl border-2 border-primary shadow-lg transition-transform active:scale-95 disabled:opacity-50"
-            onClick={handleManualCook}
-            disabled={isLoading}
-          >
-            {isLoading ? (
-              <span className="flex items-center gap-2 text-white">
-                <Loader2 className="w-6 h-6 animate-spin" /> Lagi tanya Chef AI...
-              </span>
-            ) : (
-              <span className="flex items-center gap-2 text-white">
-                <Sparkles className="w-6 h-6" /> Gas Masak!
-              </span>
-            )}
-          </Button>
+            <Button 
+              className="w-full bg-primary hover:bg-primary/90 text-white font-bold py-8 text-xl rounded-2xl border-2 border-primary shadow-lg transition-transform active:scale-95 disabled:opacity-50"
+              onClick={handleManualCook}
+              disabled={isLoading}
+            >
+              {isLoading ? (
+                <span className="flex items-center gap-2 text-white">
+                  <Loader2 className="w-6 h-6 animate-spin" /> Lagi tanya Chef AI...
+                </span>
+              ) : (
+                <span className="flex items-center gap-2 text-white">
+                  <Sparkles className="w-6 h-6" /> Gas Masak!
+                </span>
+              )}
+            </Button>
+          </div>
         </CardContent>
       </Card>
     </div>
@@ -416,23 +418,25 @@ export default function TelorMuluApp() {
           </CardContent>
         </Card>
 
-        {/* Video Section */}
-        <div className="space-y-4 pt-4">
-          <h3 className="text-xl font-bold text-primary flex items-center gap-2 justify-center md:justify-start">
-            <Youtube className="w-6 h-6 text-red-600" /> Tonton Biar Gak Gagal 🎬
-          </h3>
-          <div className="aspect-video w-full rounded-3xl overflow-hidden border-4 border-primary shadow-2xl bg-black">
-            <iframe 
-              width="100%" 
-              height="100%" 
-              src={videoUrl} 
-              title="YouTube video player" 
-              frameBorder="0" 
-              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
-              allowFullScreen
-            ></iframe>
+        {/* Video Section - Hanya muncul untuk resep statis dari home */}
+        {!isGenerated && (
+          <div className="space-y-4 pt-4">
+            <h3 className="text-xl font-bold text-primary flex items-center gap-2 justify-center md:justify-start">
+              <Youtube className="w-6 h-6 text-red-600" /> Tonton Biar Gak Gagal 🎬
+            </h3>
+            <div className="aspect-video w-full rounded-3xl overflow-hidden border-4 border-primary shadow-2xl bg-black">
+              <iframe 
+                width="100%" 
+                height="100%" 
+                src={videoUrl} 
+                title="YouTube video player" 
+                frameBorder="0" 
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+                allowFullScreen
+              ></iframe>
+            </div>
           </div>
-        </div>
+        )}
 
         <div className="flex justify-center pt-8">
           <Button 
