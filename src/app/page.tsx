@@ -1,4 +1,3 @@
-
 "use client";
 
 import { useState } from "react";
@@ -147,7 +146,7 @@ export default function TelorMuluApp() {
       <section id="kenapa-telor" className="py-12 border-t-2 border-primary/10 space-y-10 scroll-mt-6">
         <div className="text-center space-y-2">
           <h2 className="text-4xl font-black text-primary tracking-tight flex items-center justify-center gap-3">
-            <Heart className="w-8 h-8 fill-primary" /> Kenapa Telor?
+            Kenapa Telor?
           </h2>
           <div className="h-1.5 w-24 bg-secondary mx-auto rounded-full" />
         </div>
