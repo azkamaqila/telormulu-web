@@ -162,7 +162,7 @@ export default function TelorMuluApp() {
           <h2 className="text-2xl flex items-center gap-2 font-bold">
             <ChefHat className="w-8 h-8" /> Cari masakan telor yang pas buat loe!
           </h2>
-          <p className="text-white/80 italic text-sm">Cek dulu apa aja yang loe punya.</p>
+          <p className="text-white/80 italic text-sm">Pas-in dulu sama apa aja yang loe punya.</p>
         </div>
         <CardContent className="p-8 space-y-8">
           {isSultan && <AntiSultanAlert />}
