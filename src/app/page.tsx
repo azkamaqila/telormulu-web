@@ -7,7 +7,7 @@ import { Checkbox } from "@/components/ui/checkbox";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { RadioGroup, RadioGroupItem } from "@/components/ui/radio-group";
-import { Plus, Minus, ChefHat, ArrowLeft, Youtube, Sparkles, Loader2, Clock, Wrench, Utensils, ShoppingBasket, Search } from "lucide-react";
+import { Plus, Minus, ChefHat, ArrowLeft, Youtube, Sparkles, Loader2, Clock, Wrench, Utensils, ShoppingBasket, Search, Heart } from "lucide-react";
 import { COMMUNITY_RECIPES, type StaticRecipe, getYouTubeLink } from "@/lib/recipes-data";
 import { AntiSultanAlert } from "@/components/AntiSultanAlert";
 import { generateEggRecipe, type GenerateEggRecipeOutput } from "@/ai/flows/generate-egg-recipe";
@@ -70,7 +70,7 @@ export default function TelorMuluApp() {
   };
 
   const renderHome = () => (
-    <div className="max-w-4xl mx-auto p-6 space-y-8 animate-in fade-in slide-in-from-bottom-4 duration-500">
+    <div className="max-w-4xl mx-auto p-6 space-y-16 animate-in fade-in slide-in-from-bottom-4 duration-500">
       <header className="flex flex-col md:flex-row justify-between items-center gap-6">
         <div 
           className="cursor-pointer transition-all hover:scale-105 flex items-center gap-2 group" 
@@ -137,6 +137,40 @@ export default function TelorMuluApp() {
               </div>
             </Card>
           ))}
+        </div>
+      </section>
+
+      {/* Romanticizing Telor Section */}
+      <section className="py-12 border-t-2 border-primary/10 space-y-10">
+        <div className="text-center space-y-2">
+          <h2 className="text-4xl font-black text-primary tracking-tight flex items-center justify-center gap-3">
+            <Heart className="w-8 h-8 fill-primary" /> Kenapa Telor?
+          </h2>
+          <div className="h-1.5 w-24 bg-secondary mx-auto rounded-full" />
+        </div>
+        
+        <div className="max-w-3xl mx-auto space-y-8 text-lg text-center leading-relaxed text-black/80 font-medium italic">
+          <p className="bg-secondary/5 p-6 rounded-3xl border border-dashed border-primary/20">
+            "Bagi pejuang rantau, telor bukan sekadar sumber protein. Ia adalah sahabat setia di tanggal tua, 
+            pahlawan tanpa tanda jasa yang selalu ada saat dompet mulai membisu dan perut mulai berontak. 
+            Dalam satu butir telor, tersimpan harapan akan rasa kenyang yang jujur, hangat, dan menenangkan."
+          </p>
+          
+          <p>
+            Lihatlah bagaimana ia begitu tulus. Bisa jadi ceplok yang garing di pinggir, dadar yang 
+            lembut merayu, atau orak-arik yang berantakan namun penuh cinta. Telor tak pernah menghakimi 
+            seberapa mahir tanganmu mengayun spatula; ia selalu memberikan yang terbaik bagi mereka yang lapar.
+          </p>
+          
+          <p className="text-primary font-bold">
+            Ia adalah saksi bisu perjuanganmu mengejar gelar, menemani malam-malam panjang mengerjakan tugas, 
+            dan menjadi perayaan kecil atas keberhasilanmu bertahan hidup. 
+            Telor adalah kemewahan yang sederhana. Karena pada akhirnya, semua akan telor pada waktunya.
+          </p>
+        </div>
+        
+        <div className="flex justify-center pt-4">
+          <span className="text-4xl">🥚✨🍳</span>
         </div>
       </section>
     </div>
