@@ -180,7 +180,11 @@ export default function TelorMuluApp() {
                 <Minus className="w-5 h-5" />
               </Button>
               <div className="text-center min-w-[100px] flex-1">
-                <span className="text-4xl font-bold">{eggsCount}</span>
+                <span className="text-4xl font-bold">
+                  {eggsCount}
+                  {eggsCount === 6 && "!"}
+                  {eggsCount === 7 && "!!"}
+                </span>
                 <span className="block text-xs font-bold uppercase tracking-widest mt-1">Max. 7 Butir</span>
               </div>
               <Button 
