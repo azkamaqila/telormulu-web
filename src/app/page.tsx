@@ -26,7 +26,7 @@ export default function TelorMuluApp() {
   const [mainIngredients, setMainIngredients] = useState<string[]>([]);
   const [showAdditional, setShowAdditional] = useState(false);
   const [additionalIngredients, setAdditionalIngredients] = useState("");
-  const [cookingTool, setCookingTool] = useState("Kompor & Teflon");
+  const [cookingTool, setCookingTool] = useState("Teflon");
   const [isSultan, setIsSultan] = useState(false);
   const [isLoading, setIsLoading] = useState(false);
 
@@ -238,8 +238,8 @@ export default function TelorMuluApp() {
           {/* Section 3: Tools */}
           <div className="space-y-4">
             <Label className="text-lg font-bold">Masak Pake Apa?</Label>
-            <RadioGroup value={cookingTool} onValueChange={setCookingTool} className="grid grid-cols-1 sm:grid-cols-3 gap-4">
-              {["Kompor & Teflon", "Rice Cooker", "Setrikaan (Nekat)"].map((tool) => (
+            <RadioGroup value={cookingTool} onValueChange={setCookingTool} className="grid grid-cols-2 sm:grid-cols-3 gap-4">
+              {["Teflon", "Rice Cooker", "Wajan", "Air Fryer", "Panci", "Microwave"].map((tool) => (
                 <div key={tool} className={`flex items-center justify-center p-3 border-2 rounded-xl cursor-pointer transition-all ${cookingTool === tool ? 'bg-secondary border-primary shadow-md scale-105' : 'bg-white border-primary/20 hover:border-primary/50'}`} onClick={() => setCookingTool(tool)}>
                   <RadioGroupItem value={tool} id={tool} className="sr-only" />
                   <Label htmlFor={tool} className="text-xs font-bold text-center cursor-pointer">{tool}</Label>
