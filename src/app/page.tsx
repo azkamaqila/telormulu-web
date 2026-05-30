@@ -43,7 +43,7 @@ export default function TelorMuluApp() {
       "saffron", "abalone", "king crab", "matsutake", 
       "bird nest", "sarang burung", "emas", "gold leaf", 
       "iberico", "bluefin", "uni", "toro", "porcini", "beluga",
-      "king salmon", "shark fin", "sirip hiu", "oyster"
+      "king salmon", "salmon", "tomahawk", "shark fin", "sirip hiu", "oyster"
     ];
     const inputLower = additionalIngredients.toLowerCase();
     
@@ -180,7 +180,7 @@ export default function TelorMuluApp() {
         
         <div className="flex flex-col items-center justify-center pt-4 gap-6">
           <span className="text-4xl">🥚✨🍳</span>
-          <div className="text-muted-foreground/70 text-base font-bold tracking-[0.2em] lowercase">
+          <div className="text-muted-foreground/70 text-sm font-bold tracking-[0.2em] lowercase">
             @jayuk.id
           </div>
         </div>
