@@ -312,7 +312,7 @@ export default function TelorMuluApp() {
             >
               {isLoading ? (
                 <span className="flex items-center gap-2 text-white">
-                  <Loader2 className="w-6 h-6 animate-spin" /> Lagi tanya Chef AI...
+                  <Loader2 className="w-6 h-6 animate-spin" /> Nanya dulu ke chefnya..
                 </span>
               ) : (
                 <span className="flex items-center gap-2 text-white">
