@@ -164,7 +164,7 @@ export default function TelorMuluApp() {
 
           {/* Section 1: Eggs Count */}
           <div className="space-y-4">
-            <Label className="text-lg font-bold">1. Stok Telur Kamu (Maks 10)</Label>
+            <Label className="text-lg font-bold block text-center">Stok Telor!</Label>
             <div className="flex items-center gap-6 bg-secondary/10 p-4 rounded-2xl border-2 border-dashed border-primary">
               <Button 
                 variant="outline" 
@@ -174,7 +174,7 @@ export default function TelorMuluApp() {
               >
                 <Minus className="w-5 h-5" />
               </Button>
-              <div className="text-center min-w-[100px]">
+              <div className="text-center min-w-[100px] flex-1">
                 <span className="text-4xl font-bold">{eggsCount}</span>
                 <span className="block text-xs font-bold uppercase tracking-widest mt-1">Butir</span>
               </div>
@@ -191,7 +191,7 @@ export default function TelorMuluApp() {
 
           {/* Section 2: Main Ingredients */}
           <div className="space-y-4">
-            <Label className="text-lg font-bold">2. Bahan Tambahan (Ala Kosan)</Label>
+            <Label className="text-lg font-bold">Bahan Tambahan (Ala Kosan)</Label>
             <div className="grid grid-cols-2 sm:grid-cols-3 gap-4">
               {["Kecap", "Bawang Merah", "Garam", "Cabai", "Mie Instan"].map((item) => (
                 <div key={item} className="flex items-center space-x-2 bg-white border border-primary/20 p-3 rounded-lg hover:bg-secondary/5 transition-colors cursor-pointer" onClick={() => toggleMainIngredient(item)}>
@@ -224,7 +224,7 @@ export default function TelorMuluApp() {
 
           {/* Section 3: Tools */}
           <div className="space-y-4">
-            <Label className="text-lg font-bold">3. Pake Alat Apa?</Label>
+            <Label className="text-lg font-bold">Pake Alat Apa?</Label>
             <RadioGroup value={cookingTool} onValueChange={setCookingTool} className="grid grid-cols-1 sm:grid-cols-3 gap-4">
               {["Kompor & Teflon", "Rice Cooker", "Setrikaan (Nekat)"].map((tool) => (
                 <div key={tool} className={`flex items-center justify-center p-3 border-2 rounded-xl cursor-pointer transition-all ${cookingTool === tool ? 'bg-secondary border-primary shadow-md scale-105' : 'bg-white border-primary/20 hover:border-primary/50'}`} onClick={() => setCookingTool(tool)}>
