@@ -239,10 +239,18 @@ export default function TelorMuluApp() {
           <div className="space-y-4">
             <Label className="text-lg font-bold">Masak Pake Apa?</Label>
             <RadioGroup value={cookingTool} onValueChange={setCookingTool} className="grid grid-cols-2 sm:grid-cols-3 gap-4">
-              {["Teflon", "Rice Cooker", "Wajan", "Air Fryer", "Panci", "Microwave"].map((tool) => (
-                <div key={tool} className={`flex items-center justify-center p-3 border-2 rounded-xl cursor-pointer transition-all ${cookingTool === tool ? 'bg-secondary border-primary shadow-md scale-105' : 'bg-white border-primary/20 hover:border-primary/50'}`} onClick={() => setCookingTool(tool)}>
-                  <RadioGroupItem value={tool} id={tool} className="sr-only" />
-                  <Label htmlFor={tool} className="text-xs font-bold text-center cursor-pointer">{tool}</Label>
+              {[
+                { name: "Teflon", emoji: "🍳" },
+                { name: "Rice Cooker", emoji: "🍚" },
+                { name: "Wajan", emoji: "🥘" },
+                { name: "Air Fryer", emoji: "🌬️" },
+                { name: "Panci", emoji: "🍲" },
+                { name: "Microwave", emoji: "⏲️" }
+              ].map((tool) => (
+                <div key={tool.name} className={`flex flex-col items-center justify-center p-3 border-2 rounded-xl cursor-pointer transition-all ${cookingTool === tool.name ? 'bg-secondary border-primary shadow-md scale-105' : 'bg-white border-primary/20 hover:border-primary/50'}`} onClick={() => setCookingTool(tool.name)}>
+                  <RadioGroupItem value={tool.name} id={tool.name} className="sr-only" />
+                  <span className="text-2xl mb-1">{tool.emoji}</span>
+                  <Label htmlFor={tool.name} className="text-[10px] font-bold text-center cursor-pointer">{tool.name}</Label>
                 </div>
               ))}
             </RadioGroup>
