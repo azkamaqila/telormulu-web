@@ -155,7 +155,7 @@ export default function TelorMuluApp() {
       <Card className="border-2 border-primary shadow-2xl bg-white overflow-hidden">
         <div className="bg-primary text-white p-6">
           <h2 className="text-2xl flex items-center gap-2 font-bold">
-            <ChefHat className="w-8 h-8" /> Atur Strategi Masak
+            <ChefHat className="w-8 h-8" /> Cari masakan telor yang pas buat loe!
           </h2>
           <p className="text-white/80 italic text-sm">Cek dulu apa aja yang ada di kulkas/meja kosan.</p>
         </div>
@@ -172,7 +172,9 @@ export default function TelorMuluApp() {
                 onClick={(e) => { e.stopPropagation(); setEggsCount(Math.max(1, eggsCount - 1)); }}
                 className="rounded-full border-primary text-primary hover:bg-primary hover:text-white"
               >
-                <Minus className="w-5 h-5" />
+                <item className="w-5 h-5">
+                  <Minus className="w-5 h-5" />
+                </item>
               </Button>
               <div className="text-center min-w-[100px]">
                 <span className="text-4xl font-bold">{eggsCount}</span>
