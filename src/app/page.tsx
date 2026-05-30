@@ -351,7 +351,7 @@ export default function TelorMuluApp() {
           <h1 className="text-4xl font-extrabold text-primary leading-tight text-center md:text-left flex-1">
             {selectedRecipe.title}
           </h1>
-          <div className="flex items-center gap-2 bg-secondary/20 px-6 py-2 rounded-full border-2 border-primary/20 self-center md:self-auto">
+          <div className="flex items-center gap-2 self-center md:self-auto">
             <Clock className="w-5 h-5 text-primary" />
             <span className="font-bold text-primary">{cookTime}</span>
           </div>
