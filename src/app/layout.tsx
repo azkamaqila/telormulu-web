@@ -4,7 +4,7 @@ import { Toaster } from "@/components/ui/toaster";
 
 export const metadata: Metadata = {
   title: 'telormulu - Solusi Lapar Anak Kos',
-  description: 'Aplikasi masak telur kreatif khusus buat mahasiswa rantau.',
+  description: 'Aplikasi masak telor kreatif khusus buat mahasiswa rantau.',
 };
 
 export default function RootLayout({

@@ -17,15 +17,15 @@ export interface StaticRecipe {
 export const COMMUNITY_RECIPES: StaticRecipe[] = [
   {
     id: 'ceplok-pontianak',
-    title: 'Telur Ceplok Kecap Pontianak',
-    ingredients: ['2 butir telur ayam', '2 siung bawang putih cincang', '3 buah cabai rawit iris', '2 sdm kecap manis', '1 sdm minyak goreng'],
+    title: 'Telor Ceplok Kecap Pontianak',
+    ingredients: ['2 butir telor ayam', '2 siung bawang putih cincang', '3 buah cabai rawit iris', '2 sdm kecap manis', '1 sdm minyak goreng'],
     tools: ['Teflon', 'Spatula', 'Wadah kecil'],
     ingredientsSummary: '🥚🥚🧄🌶️ Legend & Simpel',
     stepsMarkdown: `1. Siapkan bumbu siram: Campurkan kecap manis, bawang putih cincang, dan cabai rawit dalam wadah kecil.
-2. Panaskan minyak di teflon dengan api sedang cenderung besar agar pinggiran telur garing.
-3. Ceplok 2 butir telur. Biarkan bagian tepi telur menjadi garing kecokelatan namun kuning telur tetap setengah matang.
-4. Tuangkan campuran bumbu kecap tepat di atas telur yang sedang digoreng.
-5. Masak selama 30 detik hingga bumbu mendidih dan meresap. Angkat segera.`,
+2. Panaskan minyak di teflon dengan api sedang cenderung besar agar pinggiran telor garing.
+3. Ceplok 2 butir telor. Biarkan bagian tepi telor menjadi garing kecokelatan namun kuning telor tetap setengah matang.
+4. Tuangkan campuran bumbu kecap tepat di atas telor yang sedang digoreng.
+5. Masak selama 30 detik hingga bumbu mendidih and meresap. Angkat segera.`,
     videoUrl: 'https://www.youtube.com/embed/jZf-8w9C0_A',
     cookTime: '5 menit',
     servings: '1 orang',
@@ -36,16 +36,16 @@ export const COMMUNITY_RECIPES: StaticRecipe[] = [
   },
   {
     id: 'dadar-gobal-gabul',
-    title: 'Telur Dadar Gobal-Gabul',
-    ingredients: ['3 butir telur ayam', '3 batang daun bawang iris', '5 siung bawang merah iris', '4 buah cabai rawit iris', '1/2 sdt garam & kaldu'],
+    title: 'Telor Dadar Gobal-Gabul',
+    ingredients: ['3 butir telor ayam', '3 batang daun bawang iris', '5 siung bawang merah iris', '4 buah cabai rawit iris', '1/2 sdt garam & kaldu'],
     tools: ['Mangkuk pengocok', 'Teflon', 'Spatula'],
     ingredientsSummary: '🥚🥚🥚🌿 Cabai Melimpah',
-    stepsMarkdown: `1. Pecahkan 3 butir telur ke dalam mangkuk.
-2. Masukkan irisan daun bawang, bawang merah, dan cabai rawit yang banyak. Tambahkan garam dan kaldu.
-3. Kocok telur dengan kuat sampai berbusa agar hasilnya mengembang dan teksturnya "gobal-gabul".
+    stepsMarkdown: `1. Pecahkan 3 butir telor ke dalam mangkuk.
+2. Masukkan irisan daun bawang, bawang merah, and cabai rawit yang banyak. Tambahkan garam and kaldu.
+3. Kocok telor dengan kuat sampai berbusa agar hasilnya mengembang and teksturnya "gobal-gabul".
 4. Panaskan minyak yang agak banyak di teflon dengan api sedang.
-5. Tuang adonan telur, ratakan. Kecilkan api sedikit agar bagian dalam matang tanpa gosong di luar.
-6. Balik telur saat bagian bawah sudah kokoh, masak hingga kedua sisi garing.`,
+5. Tuang adonan telor, ratakan. Kecilkan api sedikit agar bagian dalam matang tanpa gosong di luar.
+6. Balik telor saat bagian bawah sudah kokoh, masak hingga kedua sisi garing.`,
     videoUrl: 'https://www.youtube.com/embed/S26M7M-0nF8',
     cookTime: '10 menit',
     servings: '2 orang',
@@ -56,15 +56,15 @@ export const COMMUNITY_RECIPES: StaticRecipe[] = [
   },
   {
     id: 'orak-arik-semalam',
-    title: 'Orak-Arik Telur Sisa Semalam',
-    ingredients: ['2 butir telur ayam', '1 piring nasi sisa semalam (opsional)', '2 buah sosis iris', '1 sdm kecap manis', '1/2 sdt garam'],
+    title: 'Orak-Arik Telor Sisa Semalam',
+    ingredients: ['2 butir telor ayam', '1 piring nasi sisa semalam (opsional)', '2 buah sosis iris', '1 sdm kecap manis', '1/2 sdt garam'],
     tools: ['Wajan', 'Sutil'],
     ingredientsSummary: '🥚🥚🌭 Pemanfaatan Logistik',
     stepsMarkdown: `1. Panaskan sedikit minyak di wajan. Tumis irisan sosis hingga sedikit berubah warna.
-2. Pecahkan 2 butir telur langsung ke wajan. Biarkan 5 detik lalu orak-arik hingga hancur kasar.
-3. Masukkan nasi sisa semalam jika ada, atau cukup sosis dan telur saja.
-4. Tambahkan kecap manis dan garam. Aduk cepat dengan api besar agar aroma "smoky" keluar.
-5. Masak hingga telur benar-benar kering dan bumbu merata.`,
+2. Pecahkan 2 butir telor langsung ke wajan. Biarkan 5 detik lalu orak-arik hingga hancur kasar.
+3. Masukkan nasi sisa semalam jika ada, atau cukup sosis and telor saja.
+4. Tambahkan kecap manis and garam. Aduk cepat dengan api besar agar aroma "smoky" keluar.
+5. Masak hingga telor benar-benar kering and bumbu merata.`,
     videoUrl: 'https://www.youtube.com/embed/6iW4J2-iUvE',
     cookTime: '8 menit',
     servings: '1 orang',
@@ -75,15 +75,15 @@ export const COMMUNITY_RECIPES: StaticRecipe[] = [
   },
   {
     id: 'kukus-rice-cooker',
-    title: 'Telur Kukus Rice Cooker',
-    ingredients: ['2 butir telur ayam', '150ml air hangat', '1 batang daun bawang iris', '1 sdt kecap asin', '1/4 sdt merica'],
+    title: 'Telor Kukus Rice Cooker',
+    ingredients: ['2 butir telor ayam', '150ml air hangat', '1 batang daun bawang iris', '1 sdt kecap asin', '1/4 sdt merica'],
     tools: ['Mangkuk tahan panas', 'Rice Cooker'],
     ingredientsSummary: '🥚🥚🍶 Lembut Tanpa Minyak',
-    stepsMarkdown: `1. Kocok lepas 2 butir telur dalam mangkuk tahan panas.
-2. Campurkan air hangat, kecap asin, dan merica. Aduk perlahan agar tidak terlalu banyak buih.
+    stepsMarkdown: `1. Kocok lepas 2 butir telor dalam mangkuk tahan panas.
+2. Campurkan air hangat, kecap asin, and merica. Aduk perlahan agar tidak terlalu banyak buih.
 3. Masukkan irisan daun bawang.
 4. Masukkan mangkuk ke dalam rice cooker saat nasi sedang dimasak (stengah matang) atau gunakan fungsi "Steam".
-5. Kukus selama 10-15 menit hingga tekstur telur set seperti puding.`,
+5. Kukus selama 10-15 menit hingga tekstur telor set seperti puding.`,
     videoUrl: 'https://www.youtube.com/embed/oG06m69I_hQ',
     cookTime: '15 menit',
     servings: '1 orang',
@@ -94,15 +94,15 @@ export const COMMUNITY_RECIPES: StaticRecipe[] = [
   },
   {
     id: 'dadar-asam-manis',
-    title: 'Telur Dadar Kuah Asam Manis',
-    ingredients: ['2 butir telur ayam', '3 sdm saus tomat', '1 sdm saus sambal', '1/2 buah bawang bombay iris', '100ml air'],
+    title: 'Telor Dadar Kuah Asam Manis',
+    ingredients: ['2 butir telor ayam', '3 sdm saus tomat', '1 sdm saus sambal', '1/2 buah bawang bombay iris', '100ml air'],
     tools: ['Teflon', 'Panci kecil (untuk saus)', 'Sutil'],
     ingredientsSummary: '🥚🥚🍅 Sauce Magic',
-    stepsMarkdown: `1. Goreng 2 butir telur menjadi dadar krispi standar. Sisihkan dan potong menjadi 4 bagian.
+    stepsMarkdown: `1. Goreng 2 butir telor menjadi dadar krispi standar. Sisihkan and potong menjadi 4 bagian.
 2. Buat saus: Tumis bawang bombay hingga layu.
-3. Masukkan saus tomat, saus sambal, dan air. Aduk hingga mendidih dan mengental.
-4. Koreksi rasa dengan sedikit gula dan garam.
-5. Siramkan saus asam manis di atas potongan telur dadar sebelum disajikan.`,
+3. Masukkan saus tomat, saus sambal, and air. Aduk hingga mendidih and mengental.
+4. Koreksi rasa dengan sedikit gula and garam.
+5. Siramkan saus asam manis di atas potongan telor dadar sebelum disajikan.`,
     videoUrl: 'https://www.youtube.com/embed/X99M-07_1A4',
     cookTime: '12 menit',
     servings: '1 orang',
@@ -113,15 +113,15 @@ export const COMMUNITY_RECIPES: StaticRecipe[] = [
   },
   {
     id: 'ceplok-balado-iris',
-    title: 'Telur Ceplok Balado Iris',
-    ingredients: ['2 butir telur ayam', '5 buah cabai merah iris serong', '3 siung bawang merah iris', '1 buah tomat potong dadu', '1/2 sdt garam'],
+    title: 'Telor Ceplok Balado Iris',
+    ingredients: ['2 butir telor ayam', '5 buah cabai merah iris serong', '3 siung bawang merah iris', '1 buah tomat potong dadu', '1/2 sdt garam'],
     tools: ['Wajan', 'Sutil'],
     ingredientsSummary: '🥚🥚🌶️ Pedas Praktis',
-    stepsMarkdown: `1. Ceplok 2 butir telur hingga matang atau setengah matang sesuai selera. Sisihkan.
-2. Tumis bawang merah dan cabai iris hingga layu dan harum.
-3. Masukkan potongan tomat, masak hingga tomat hancur dan mengeluarkan sari air.
-4. Tambahkan garam dan sedikit air jika terlalu kering.
-5. Masukkan kembali telur ceplok, aduk perlahan agar bumbu iris menempel.`,
+    stepsMarkdown: `1. Ceplok 2 butir telor hingga matang atau setengah matang sesuai selera. Sisihkan.
+2. Tumis bawang merah and cabai iris hingga layu and harum.
+3. Masukkan potongan tomat, masak hingga tomat hancur and mengeluarkan sari air.
+4. Tambahkan garam and sedikit air jika terlalu kering.
+5. Masukkan kembali telor ceplok, aduk perlahan agar bumbu iris menempel.`,
     videoUrl: 'https://www.youtube.com/embed/8oF_8O2pW0k',
     cookTime: '10 menit',
     servings: '1 orang',
@@ -132,16 +132,16 @@ export const COMMUNITY_RECIPES: StaticRecipe[] = [
   },
   {
     id: 'tamagoyaki-kw',
-    title: 'Tamagoyaki KW (Telur Gulung Teflon)',
-    ingredients: ['2 butir telur ayam', '2 sdm susu cair (opsional)', '1/2 sdt kaldu jamur', 'Sedikit minyak goreng'],
+    title: 'Tamagoyaki KW (Telor Gulung Teflon)',
+    ingredients: ['2 butir telor ayam', '2 sdm susu cair (opsional)', '1/2 sdt kaldu jamur', 'Sedikit minyak goreng'],
     tools: ['Teflon anti lengket', 'Spatula/Sumpit', 'Mangkuk'],
     ingredientsSummary: '🥚🥚🥛 Ala Jepang Versi Kosan',
-    stepsMarkdown: `1. Kocok telur bersama susu cair dan kaldu jamur hingga benar-benar rata.
+    stepsMarkdown: `1. Kocok telor bersama susu cair and kaldu jamur hingga benar-benar rata.
 2. Panaskan teflon dengan api sangat kecil, olesi minyak tipis-tipis menggunakan tisu.
-3. Tuangkan sebagian adonan telur hingga menutupi permukaan teflon.
-4. Saat bagian bawah mulai set tapi atas masih agak basah, gulung telur perlahan ke satu sisi.
-5. Geser gulungan ke pinggir, tuang lagi adonan telur di sisi kosong. Ulangi proses hingga adonan habis.
-6. Tekan-tekan lembut agar bentuknya kotak rapi, angkat dan potong-potong.`,
+3. Tuangkan sebagian adonan telor hingga menutupi permukaan teflon.
+4. Saat bagian bawah mulai set tapi atas masih agak basah, gulung telor perlahan ke satu sisi.
+5. Geser gulungan ke pinggir, tuang lagi adonan telor di sisi kosong. Ulangi proses hingga adonan habis.
+6. Tekan-tekan lembut agar bentuknya kotak rapi, angkat and potong-potong.`,
     videoUrl: 'https://www.youtube.com/embed/S_8qK2y466M',
     cookTime: '15 menit',
     servings: '1 orang',
@@ -152,14 +152,14 @@ export const COMMUNITY_RECIPES: StaticRecipe[] = [
   },
   {
     id: 'sarden-telur',
-    title: 'Sarden Telur Orak-Arik',
-    ingredients: ['2 butir telur ayam', '1 kaleng kecil sarden', '2 siung bawang putih iris', '3 buah cabai rawit iris'],
+    title: 'Sarden Telor Orak-Arik',
+    ingredients: ['2 butir telor ayam', '1 kaleng kecil sarden', '2 siung bawang putih iris', '3 buah cabai rawit iris'],
     tools: ['Wajan', 'Sutil'],
     ingredientsSummary: '🥚🥚🥫 Protein Double',
-    stepsMarkdown: `1. Tumis bawang putih dan cabai rawit hingga harum.
-2. Pecahkan 2 butir telur, orak-arik kasar hingga setengah matang.
-3. Masukkan satu kaleng sarden. Hancurkan ikan sarden jika ingin tekstur yang lebih menyatu dengan telur.
-4. Masak hingga kuah sarden mendidih dan meresap ke dalam telur.
+    stepsMarkdown: `1. Tumis bawang putih and cabai rawit hingga harum.
+2. Pecahkan 2 butir telor, orak-arik kasar hingga setengah matang.
+3. Masukkan satu kaleng sarden. Hancurkan ikan sarden jika ingin tekstur yang lebih menyatu dengan telor.
+4. Masak hingga kuah sarden mendidih and meresap ke dalam telor.
 5. Tidak perlu ditambah garam karena sarden biasanya sudah cukup asin.`,
     videoUrl: 'https://www.youtube.com/embed/6iW4J2-iUvE',
     cookTime: '10 menit',
@@ -172,13 +172,13 @@ export const COMMUNITY_RECIPES: StaticRecipe[] = [
   {
     id: 'omelet-interjunet',
     title: 'Omelet Mi Interjunet',
-    ingredients: ['2 butir telur ayam', '1 bungkus mi instan goreng', '1 batang daun bawang iris', 'Sedikit kornet (opsional)'],
+    ingredients: ['2 butir telor ayam', '1 bungkus mi instan goreng', '1 batang daun bawang iris', 'Sedikit kornet (opsional)'],
     tools: ['Panci (rebus mi)', 'Teflon', 'Spatula'],
-    ingredientsSummary: '🥚🥚🍜 Kenyang Maksimal',
+    ingredientsSummary: '🥚🥚 Ramen Kenyang Maksimal',
     stepsMarkdown: `1. Rebus mi instan hingga matang, tiriskan. Campur dengan bumbu bawaan mi.
-2. Kocok 2 butir telur, masukkan mi yang sudah berbumbu dan daun bawang.
+2. Kocok 2 butir telor, masukkan mi yang sudah berbumbu and daun bawang.
 3. Tambahkan kornet jika ada untuk rasa yang lebih mewah.
-4. Panaskan sedikit minyak, tuang adonan mi telur ke teflon.
+4. Panaskan sedikit minyak, tuang adonan mi telor ke teflon.
 5. Masak dengan api kecil agar matang merata. Balik saat satu sisi sudah garing kecokelatan.`,
     videoUrl: 'https://www.youtube.com/embed/oG06m69I_hQ',
     cookTime: '10 menit',
@@ -190,15 +190,15 @@ export const COMMUNITY_RECIPES: StaticRecipe[] = [
   },
   {
     id: 'rendang-instan',
-    title: 'Telur Bumbu Rendang Instan',
-    ingredients: ['4 butir telur rebus', '1 sachet bumbu rendang instan', '100ml air', '1 sdm minyak goreng'],
+    title: 'Telor Bumbu Rendang Instan',
+    ingredients: ['4 butir telor rebus', '1 sachet bumbu rendang instan', '100ml air', '1 sdm minyak goreng'],
     tools: ['Panci kecil/Wajan', 'Sendok sayur'],
     ingredientsSummary: '🥚🥚🥚🥚🥥 Rasa Resto Padang',
-    stepsMarkdown: `1. Goreng telur rebus yang sudah dikupas hingga kulitnya sedikit keriting kecokelatan. Sisihkan.
+    stepsMarkdown: `1. Goreng telor rebus yang sudah dikupas hingga kulitnya sedikit keriting kecokelatan. Sisihkan.
 2. Tumis bumbu rendang instan dengan sedikit minyak hingga aromanya keluar.
 3. Masukkan air, aduk rata hingga mendidih.
-4. Masukkan telur rebus goreng. Kecilkan api.
-5. Masak (simmer) hingga kuah rendang menyusut dan bumbu meresap sempurna ke dalam telur.`,
+4. Masukkan telor rebus goreng. Kecilkan api.
+5. Masak (simmer) hingga kuah rendang menyusut and bumbu meresap sempurna ke dalam telor.`,
     videoUrl: 'https://www.youtube.com/embed/kYj6oN_fKTM',
     cookTime: '20 menit',
     servings: '2 orang',

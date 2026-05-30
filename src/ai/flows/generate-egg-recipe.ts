@@ -11,7 +11,7 @@ import {ai} from '@/ai/genkit';
 import {z} from 'genkit';
 
 const GenerateEggRecipeInputSchema = z.object({
-  eggsCount: z.number().int().min(1).max(10).describe('The number of eggs available.'),
+  eggsCount: z.number().int().min(1).max(10).describe('The number of telors available.'),
   mainIngredients: z.array(z.string()).describe('A list of common boarding house ingredients available.'),
   additionalIngredients: z
     .string()
@@ -40,12 +40,12 @@ const prompt = ai.definePrompt({
   name: 'generateEggRecipePrompt',
   input: {schema: GenerateEggRecipeInputSchema},
   output: {schema: GenerateEggRecipeOutputSchema},
-  prompt: `You are a professional chef specializing in creative egg-based cuisine for limited kitchen environments.
+  prompt: `You are a professional chef specializing in creative telor-based cuisine for limited kitchen environments.
 
 Based on the following available ingredients and tools, create a high-quality, detailed recipe. The tone should be informative and professional.
 
 --- INPUT ---
-Telur yang dimiliki: {{{eggsCount}}} butir
+Telor yang dimiliki: {{{eggsCount}}} butir
 Bahan Utama: {{#each mainIngredients}}{{{this}}}{{#unless @last}}, {{/unless}}{{/each}}
 {{#if additionalIngredients}}Tambahan: {{{additionalIngredients}}}{{/if}}
 Alat yang Dimiliki: {{#each cookingTools}}{{{this}}}{{#unless @last}}, {{/unless}}{{/each}}
@@ -53,9 +53,9 @@ Alat yang Dimiliki: {{#each cookingTools}}{{{this}}}{{#unless @last}}, {{/unless
 --- INSTRUCTIONS ---
 1. **Title**: Create a catchy yet professional title.
 2. **Cook Time**: Accurate estimation of cooking time.
-3. **Ingredients List**: Precise list with measurements (e.g., "2 butir telur", "1 sdm Kecap manis").
+3. **Ingredients List**: Precise list with measurements (e.g., "2 butir telor", "1 sdm Kecap manis").
 4. **Tools Used**: Identify which of the available tools are used in this recipe.
-5. **Steps Markdown**: Provide detailed, structured instructions. Explain techniques clearly (e.g., "pecahkan telur ke wadah terpisah", "panaskan minyak dengan api sedang"). Do not use slang or "jokes nyeleneh". Focus on making the recipe easy to follow correctly.
+5. **Steps Markdown**: Provide detailed, structured instructions. Explain techniques clearly (e.g., "pecahkan telor ke wadah terpisah", "panaskan minyak dengan api sedang"). Do not use slang or "jokes nyeleneh". Focus on making the recipe easy to follow correctly.
 
 Respond strictly in JSON format according to the output schema.`,
 });
