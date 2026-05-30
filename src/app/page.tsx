@@ -7,7 +7,7 @@ import { Checkbox } from "@/components/ui/checkbox";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { RadioGroup, RadioGroupItem } from "@/components/ui/radio-group";
-import { Plus, Minus, ChefHat, ArrowLeft, Youtube, Sparkles, Loader2, Clock, Wrench, Utensils, ShoppingBasket } from "lucide-react";
+import { Plus, Minus, ChefHat, ArrowLeft, Youtube, Sparkles, Loader2, Clock, Wrench, Utensils, ShoppingBasket, Search } from "lucide-react";
 import { COMMUNITY_RECIPES, type StaticRecipe, getYouTubeLink } from "@/lib/recipes-data";
 import { AntiSultanAlert } from "@/components/AntiSultanAlert";
 import { generateEggRecipe, type GenerateEggRecipeOutput } from "@/ai/flows/generate-egg-recipe";
@@ -196,25 +196,33 @@ export default function TelorMuluApp() {
 
           {/* Section 2: Main Ingredients */}
           <div className="space-y-4">
-            <Label className="text-lg font-bold">Bahan Tambahan</Label>
+            <Label className="text-lg font-bold">Bahan Tambahan 🧺</Label>
             <div className="grid grid-cols-2 sm:grid-cols-3 gap-4">
-              {["Kecap", "Minyak Goreng", "Garam", "Cabai", "Mentega"].map((item) => (
-                <div key={item} className="flex items-center space-x-2 bg-white border border-primary/20 p-3 rounded-lg hover:bg-secondary/5 transition-colors cursor-pointer" onClick={() => toggleMainIngredient(item)}>
+              {[
+                { name: "Kecap", emoji: "🧴" },
+                { name: "Minyak Goreng", emoji: "🍶" },
+                { name: "Garam", emoji: "🧂" },
+                { name: "Cabai", emoji: "🌶️" },
+                { name: "Mentega", emoji: "🧈" }
+              ].map((item) => (
+                <div key={item.name} className="flex items-center space-x-2 bg-white border border-primary/20 p-3 rounded-lg hover:bg-secondary/5 transition-colors cursor-pointer" onClick={() => toggleMainIngredient(item.name)}>
                   <Checkbox 
-                    id={item} 
-                    checked={mainIngredients.includes(item)} 
-                    onCheckedChange={() => toggleMainIngredient(item)}
+                    id={item.name} 
+                    checked={mainIngredients.includes(item.name)} 
+                    onCheckedChange={() => toggleMainIngredient(item.name)}
                     className="border-primary data-[state=checked]:bg-primary"
                   />
-                  <label htmlFor={item} className="text-sm font-medium leading-none cursor-pointer">{item}</label>
+                  <label htmlFor={item.name} className="text-sm font-medium leading-none cursor-pointer">
+                    {item.name} {item.emoji}
+                  </label>
                 </div>
               ))}
               <Button 
-                variant="ghost" 
+                variant="outline" 
                 onClick={() => setShowAdditional(!showAdditional)}
-                className="text-primary hover:text-primary hover:bg-secondary/20 h-auto py-2 font-bold"
+                className="border-primary/20 hover:bg-secondary/5 h-auto py-3 font-bold justify-start text-primary"
               >
-                + Ada yang lain?
+                <Search className="w-4 h-4 mr-2" /> Lainnya?
               </Button>
             </div>
             {showAdditional && (
