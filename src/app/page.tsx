@@ -196,7 +196,7 @@ export default function TelorMuluApp() {
 
           {/* Section 2: Main Ingredients */}
           <div className="space-y-4">
-            <Label className="text-lg font-bold">Bahan Tambahan 🧺</Label>
+            <Label className="text-lg font-bold">Ada Bahan Tambahan? 🧺</Label>
             <div className="grid grid-cols-2 sm:grid-cols-3 gap-4">
               {[
                 { name: "Kecap", emoji: "🍾" },
