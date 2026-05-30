@@ -171,7 +171,7 @@ export default function TelorMuluApp() {
         
         <div className="flex flex-col items-center justify-center pt-4 gap-6">
           <span className="text-4xl">🥚✨🍳</span>
-          <div className="text-muted-foreground/40 text-xs font-bold tracking-[0.2em] uppercase">
+          <div className="text-muted-foreground/70 text-sm font-bold tracking-[0.2em] uppercase">
             @jayuk.id
           </div>
         </div>
