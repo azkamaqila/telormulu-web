@@ -1,3 +1,4 @@
+
 "use client";
 
 import { useState } from "react";
@@ -96,7 +97,7 @@ export default function TelorMuluApp() {
 
       <section className="space-y-4">
         <div className="flex items-center gap-2">
-          <h2 className="text-xl font-bold text-primary">🥚 TOP 10 Masakan Telor Trending di Indonesia 🇮🇩</h2>
+          <h2 className="text-xl font-bold text-primary">🥚 Koleksi Resep Telor Profesional 🧑‍🍳</h2>
         </div>
         <div className="grid grid-cols-1 gap-6">
           {COMMUNITY_RECIPES.map((recipe) => (
@@ -320,7 +321,11 @@ export default function TelorMuluApp() {
   const renderDetail = () => {
     if (!selectedRecipe) return null;
     const isGenerated = !('id' in selectedRecipe);
-    const videoUrl = getYouTubeLink(selectedRecipe.title);
+    
+    // Gunakan videoUrl dari data jika ada, jika tidak (untuk AI) gunakan getYouTubeLink
+    const videoUrl = ('videoUrl' in selectedRecipe && selectedRecipe.videoUrl) 
+      ? selectedRecipe.videoUrl 
+      : getYouTubeLink(selectedRecipe.title);
     
     const ingredients = 'ingredients' in selectedRecipe 
       ? selectedRecipe.ingredients 
