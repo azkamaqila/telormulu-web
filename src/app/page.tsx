@@ -199,7 +199,7 @@ export default function TelorMuluApp() {
             <Label className="text-lg font-bold">Bahan Tambahan 🧺</Label>
             <div className="grid grid-cols-2 sm:grid-cols-3 gap-4">
               {[
-                { name: "Kecap", emoji: "🧴" },
+                { name: "Kecap", emoji: "🍾" },
                 { name: "Minyak Goreng", emoji: "🍶" },
                 { name: "Garam", emoji: "🧂" },
                 { name: "Cabai", emoji: "🌶️" },
