@@ -185,7 +185,7 @@ export default function TelorMuluApp() {
                   {eggsCount === 6 && "!"}
                   {eggsCount === 7 && "!?"}
                 </span>
-                <span className="block text-xs font-bold uppercase tracking-widest mt-1">Max. 7 Butir</span>
+                <span className="block text-xs font-bold uppercase tracking-widest mt-1">BUTIR</span>
               </div>
               <Button 
                 variant="outline" 
