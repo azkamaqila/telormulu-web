@@ -62,7 +62,7 @@ export const COMMUNITY_RECIPES: StaticRecipe[] = [
     stepsMarkdown: `1. Tumis Aroma: Panaskan 1 sdm minyak di atas wajan dengan api sedang. Masukkan bawang putih cincang, tumis hingga mengeluarkan aroma harum dan berwarna kecokelatan ringan.
 2. Pengolahan Protein: Masukkan irisan sosis. Masak hingga sisi sosis sedikit berubah warna dan teksturnya menjadi agak kencang.
 3. Teknik Scrambling: Pecahkan 2 butir telor langsung ke tengah wajan. Diamkan selama kurang lebih 10 detik hingga bagian bawah telor sedikit set, kemudian gunakan sutil untuk mengaduk secara kasar (orak-arik) hingga terbentuk gumpalan telor yang bertekstur.
-4. Bumbu & Karakter: Tambahkan kecap manis, garam, dan lada hitam. Tingkatkan api menjadi besar sejenak, aduk cepat selama 30 detik. Teknik ini akan memberikan sedikit aroma "smoky" (wok hei) pada masakan.
+4. Bumbu & Karakter: Tambahkan kecap manis, garam, and lada hitam. Tingkatkan api menjadi besar sejenak, aduk cepat selama 30 detik. Teknik ini akan memberikan sedikit aroma smoky (wok hei) pada masakan.
 5. Penyajian Akhir: Segera angkat masakan agar telor tidak menjadi terlalu kering (overcooked). Sajikan sebagai pendamping nasi atau roti.`,
     videoUrl: 'https://www.youtube.com/embed/6iW4J2-iUvE',
     cookTime: '8 menit',
@@ -80,8 +80,8 @@ export const COMMUNITY_RECIPES: StaticRecipe[] = [
     ingredientsSummary: '🥚🥚🍶 Tekstur Halus Seperti Puding',
     stepsMarkdown: `1. Pencampuran Adonan: Kocok lepas 2 butir telor dalam mangkuk tahan panas secara perlahan agar tidak banyak buih terbentuk.
 2. Rasio Kaldu: Campurkan kaldu cair hangat (suhu suam-suam kuku) dengan kecap asin dan minyak wijen. Tuangkan secara bertahap ke dalam kocokan telor sambil terus diaduk perlahan.
-3. Teknik Penyaringan (Opsional tapi Direkomendasikan): Saring adonan menggunakan saringan halus untuk memastikan tidak ada gumpalan telor putih yang tersisa, sehingga hasil akhir akan mulus seperti puding.
-4. Proses Pengukusan: Masukkan mangkuk ke dalam rice cooker. Gunakan fungsi "Steam" atau letakkan di atas nasi yang sedang dimasak (pastikan nasi sudah hampir matang). Tutup mangkuk dengan aluminium foil agar air uap tidak menetes ke dalam adonan.
+3. Teknik Penyaringan: Saring adonan menggunakan saringan halus untuk memastikan tidak ada gumpalan telor putih yang tersisa, sehingga hasil akhir akan mulus seperti puding.
+4. Proses Pengukusan: Masukkan mangkuk ke dalam rice cooker. Gunakan fungsi Steam atau letakkan di atas nasi yang sedang dimasak (pastikan nasi sudah hampir matang). Tutup mangkuk dengan aluminium foil agar air uap tidak menetes ke dalam adonan.
 5. Pematangan: Kukus selama 12-15 menit. Cek kekentalan dengan menggoyang mangkuk sedikit; jika bagian tengah hanya sedikit bergoyang (jiggle), telor sudah matang sempurna. Taburkan daun bawang di atasnya.`,
     videoUrl: 'https://www.youtube.com/embed/oG06m69I_hQ',
     cookTime: '15 menit',
@@ -174,7 +174,7 @@ export const COMMUNITY_RECIPES: StaticRecipe[] = [
     ingredients: ['2 butir telor ayam', '1 bungkus mi instan goreng', '1 batang daun bawang (iris halus)', '2 sdm kornet sapi'],
     tools: ['Panci kecil (untuk rebus mi)', 'Teflon diameter 20cm', 'Spatula'],
     ingredientsSummary: '🥚🥚🍜 Tekstur Garing Luar Lembut Dalam',
-    stepsMarkdown: `1. Persiapan Mi: Rebus mi instan dalam air mendidih hingga mencapai tingkat kematangan "al dente" (jangan terlalu lembek). Tiriskan mi dan campurkan dengan seluruh bumbu bawaan mi instan.
+    stepsMarkdown: `1. Persiapan Mi: Rebus mi instan dalam air mendidih hingga mencapai tingkat kematangan al dente (jangan terlalu lembek). Tiriskan mi dan campurkan dengan seluruh bumbu bawaan mi instan.
 2. Adonan Utama: Dalam mangkuk, kocok 2 butir telor. Masukkan mi yang sudah berbumbu, irisan daun bawang, dan kornet sapi. Aduk hingga kornet hancur dan tercampur merata dengan telor dan mi.
 3. Teknik Menggoreng: Panaskan 1 sdm minyak di teflon menggunakan api sedang cenderung kecil. Tuangkan seluruh adonan, ratakan hingga membentuk lingkaran sempurna.
 4. Pematangan Perlahan: Masak perlahan hingga bagian bawah benar-benar garing dan berwarna cokelat gelap (namun tidak gosong). Penggunaan api kecil sangat penting agar bagian dalam yang tebal bisa matang sempurna.

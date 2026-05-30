@@ -28,7 +28,7 @@ const GenerateEggRecipeOutputSchema = z.object({
   toolsUsed: z.array(z.string()).describe('A list of cooking tools required for this specific recipe.'),
   stepsMarkdown: z
     .string()
-    .describe('Detailed, step-by-step cooking instructions in markdown format. Focus on clarity, technique, and precise timing. Avoid unnecessary jokes.'),
+    .describe('Detailed, step-by-step cooking instructions. Use simple numbered lists (1., 2., etc.) and do NOT use markdown symbols like # or * for headings or emphasis.'),
 });
 export type GenerateEggRecipeOutput = z.infer<typeof GenerateEggRecipeOutputSchema>;
 
@@ -40,7 +40,7 @@ const prompt = ai.definePrompt({
   name: 'generateEggRecipePrompt',
   input: {schema: GenerateEggRecipeInputSchema},
   output: {schema: GenerateEggRecipeOutputSchema},
-  prompt: `You are a professional chef specializing in creative telor-based cuisine for limited kitchen environments.
+  prompt: `You are a professional chef specializing in creative telor-based cuisine.
 
 Based on the following available ingredients and tools, create a high-quality, detailed recipe. The tone should be informative and professional.
 
@@ -51,11 +51,11 @@ Bahan Utama: {{#each mainIngredients}}{{{this}}}{{#unless @last}}, {{/unless}}{{
 Alat yang Dimiliki: {{#each cookingTools}}{{{this}}}{{#unless @last}}, {{/unless}}{{/each}}
 
 --- INSTRUCTIONS ---
-1. **Title**: Create a catchy yet professional title.
-2. **Cook Time**: Accurate estimation of cooking time.
-3. **Ingredients List**: Precise list with measurements (e.g., "2 butir telor", "1 sdm Kecap manis").
-4. **Tools Used**: Identify which of the available tools are used in this recipe.
-5. **Steps Markdown**: Provide detailed, structured instructions. Explain techniques clearly (e.g., "pecahkan telor ke wadah terpisah", "panaskan minyak dengan api sedang"). Do not use slang or "jokes nyeleneh". Focus on making the recipe easy to follow correctly.
+1. **Title**: Create a professional title.
+2. **Cook Time**: Accurate estimation.
+3. **Ingredients List**: Precise list with measurements.
+4. **Tools Used**: List tools needed.
+5. **Steps**: Provide detailed instructions. Use simple numbering (1. 2. 3.). IMPORTANT: Do NOT use any # symbols for headings or * symbols for bold/italic. Just use plain text with numbering.
 
 Respond strictly in JSON format according to the output schema.`,
 });
