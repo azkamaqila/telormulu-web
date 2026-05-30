@@ -164,7 +164,7 @@ export default function TelorMuluApp() {
 
           {/* Section 1: Eggs Count */}
           <div className="space-y-4">
-            <Label className="text-2xl font-bold block text-center">Stok Telor!</Label>
+            <Label className="text-2xl font-bold block text-center">Stok Telor yang Loe Punya!</Label>
             <div className="flex items-center gap-6 bg-secondary/10 p-4 rounded-2xl border-2 border-dashed border-primary">
               <Button 
                 variant="outline" 
