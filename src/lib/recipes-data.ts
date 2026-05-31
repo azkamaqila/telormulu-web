@@ -26,12 +26,12 @@ export const COMMUNITY_RECIPES: StaticRecipe[] = [
 3. Teknik Menggoreng: Pecahkan telor satu per satu ke dalam wajan. Biarkan bagian putih telor mengeras dan membentuk tekstur garing kecokelatan di bagian tepi, namun pastikan kuning telor tetap setengah matang untuk tekstur yang lebih creamy.
 4. Karamelisasi: Tuangkan campuran bumbu kecap tepat di atas permukaan telor yang sedang digoreng. Biarkan selama kurang lebih 30-45 detik hingga bumbu mendidih dan sedikit mengental (karamelisasi) di permukaan telor.
 5. Penyajian: Matikan api, angkat telor secara perlahan menggunakan spatula, dan sajikan segera di atas nasi hangat.`,
-    videoUrl: 'https://www.youtube.com/embed/jZf-8w9C0_A',
+    videoUrl: 'https://www.youtube.com/embed/o2X_iUHsfik',
     cookTime: '5 menit',
     servings: '1 orang',
     chefName: 'Chef Mami',
     chefAvatar: 'https://picsum.photos/seed/chef2/100/100',
-    imageUrl: 'https://picsum.photos/seed/egg2/400/300',
+    imageUrl: '/TELOR-CEPLOK-KECAP-BAWANG-PUTIH.webp',
     eggsCount: 2
   },
   {
@@ -45,12 +45,12 @@ export const COMMUNITY_RECIPES: StaticRecipe[] = [
 3. Teknik Penggorengan: Panaskan minyak dalam jumlah yang cukup banyak di teflon menggunakan api sedang. Minyak yang panas sangat krusial untuk membuat telor langsung mengembang saat dituang.
 4. Pematangan Merata: Tuangkan seluruh adonan telor. Setelah bagian bawah mulai mengeras, kecilkan api ke posisi rendah. Tutup teflon selama 2-3 menit agar bagian dalam matang sempurna tanpa menghanguskan bagian luar.
 5. Balik Dadar: Balik telor dengan hati-hati saat bagian bawah sudah berwarna cokelat keemasan. Masak sisi lainnya hingga matang merata. Angkat dan tiriskan sebelum disajikan.`,
-    videoUrl: 'https://www.youtube.com/embed/S26M7M-0nF8',
+    videoUrl: 'https://www.youtube.com/embed/L2KkQaB2qHo',
     cookTime: '10 menit',
     servings: '2 orang',
     chefName: 'Chef Professional',
     chefAvatar: 'https://picsum.photos/seed/chef1/100/100',
-    imageUrl: 'https://picsum.photos/seed/egg1/400/300',
+    imageUrl: '/TELOR-DADAR-TEBAL-SPESIAL-DAUN-BAWANG.webp',
     eggsCount: 3
   },
   {
@@ -64,12 +64,12 @@ export const COMMUNITY_RECIPES: StaticRecipe[] = [
 3. Teknik Scrambling: Pecahkan 2 butir telor langsung ke tengah wajan. Diamkan selama kurang lebih 10 detik hingga bagian bawah telor sedikit set, kemudian gunakan sutil untuk mengaduk secara kasar (orak-arik) hingga terbentuk gumpalan telor yang bertekstur.
 4. Bumbu & Karakter: Tambahkan kecap manis, garam, and lada hitam. Tingkatkan api menjadi besar sejenak, aduk cepat selama 30 detik. Teknik ini akan memberikan sedikit aroma smoky (wok hei) pada masakan.
 5. Penyajian Akhir: Segera angkat masakan agar telor tidak menjadi terlalu kering (overcooked). Sajikan sebagai pendamping nasi atau roti.`,
-    videoUrl: 'https://www.youtube.com/embed/6iW4J2-iUvE',
+    videoUrl: 'https://www.youtube.com/embed/iNmZwlkRIJY',
     cookTime: '8 menit',
     servings: '1 orang',
     chefName: 'Chef Spesialis Sarapan',
     chefAvatar: 'https://picsum.photos/seed/chef3/100/100',
-    imageUrl: 'https://picsum.photos/seed/egg3/400/300',
+    imageUrl: '/ORAK-ARIK-TELOR-SOSIS-PEDAS.webp',
     eggsCount: 2
   },
   {
@@ -83,12 +83,12 @@ export const COMMUNITY_RECIPES: StaticRecipe[] = [
 3. Teknik Penyaringan: Saring adonan menggunakan saringan halus untuk memastikan tidak ada gumpalan telor putih yang tersisa, sehingga hasil akhir akan mulus seperti puding.
 4. Proses Pengukusan: Masukkan mangkuk ke dalam rice cooker. Gunakan fungsi Steam atau letakkan di atas nasi yang sedang dimasak (pastikan nasi sudah hampir matang). Tutup mangkuk dengan aluminium foil agar air uap tidak menetes ke dalam adonan.
 5. Pematangan: Kukus selama 12-15 menit. Cek kekentalan dengan menggoyang mangkuk sedikit; jika bagian tengah hanya sedikit bergoyang (jiggle), telor sudah matang sempurna. Taburkan daun bawang di atasnya.`,
-    videoUrl: 'https://www.youtube.com/embed/oG06m69I_hQ',
+    videoUrl: 'https://www.youtube.com/embed/u7BJLNj4q3M',
     cookTime: '15 menit',
     servings: '1 orang',
     chefName: 'Chef Kuliner Sehat',
     chefAvatar: 'https://picsum.photos/seed/chef9/100/100',
-    imageUrl: 'https://picsum.photos/seed/egg9/400/300',
+    imageUrl: '/TELOR-KUKUS-LEMBUT-SPESIAL.webp',
     eggsCount: 2
   },
   {
@@ -102,12 +102,12 @@ export const COMMUNITY_RECIPES: StaticRecipe[] = [
 3. Pengentalan Saus: Masukkan saus tomat, saus sambal, dan air. Aduk hingga mendidih. Jika ingin saus yang lebih kental, Anda bisa menambahkan sedikit larutan maizena.
 4. Koreksi Rasa: Tambahkan sedikit gula pasir dan garam untuk menyeimbangkan rasa asam dari saus tomat. Masak hingga saus mencapai kekentalan yang diinginkan.
 5. Finishing: Siramkan saus asam manis yang masih panas secara merata ke atas potongan telor dadar. Sajikan segera selagi hangat agar tekstur dadar tetap terjaga.`,
-    videoUrl: 'https://www.youtube.com/embed/X99M-07_1A4',
+    videoUrl: 'https://www.youtube.com/embed/qD4mcPFUe5o',
     cookTime: '12 menit',
     servings: '1 orang',
     chefName: 'Chef Fusion',
     chefAvatar: 'https://picsum.photos/seed/chef7/100/100',
-    imageUrl: 'https://picsum.photos/seed/egg7/400/300',
+    imageUrl: '/TELOR-DADAR-SIRAM-SAUS-ASAM-MANIS.webp',
     eggsCount: 2
   },
   {
@@ -121,12 +121,12 @@ export const COMMUNITY_RECIPES: StaticRecipe[] = [
 3. Pengolahan Tomat: Masukkan potongan tomat. Tekan-tekan lembut tomat menggunakan sutil hingga mengeluarkan air dan teksturnya hancur menyatu dengan bumbu lainnya.
 4. Seasoning: Tambahkan garam dan sedikit air jika tumisan terlalu kering. Masak hingga bumbu meresap dan tomat membentuk saus kasar yang kental.
 5. Finishing: Letakkan kembali telor ceplok ke dalam wajan, aduk perlahan selama 15 detik agar bumbu menempel sempurna di permukaan telor. Matikan api dan sajikan.`,
-    videoUrl: 'https://www.youtube.com/embed/8oF_8O2pW0k',
+    videoUrl: 'https://www.youtube.com/embed/ajmV8rvR9QE',
     cookTime: '10 menit',
     servings: '1 orang',
     chefName: 'Chef Masakan Nusantara',
     chefAvatar: 'https://picsum.photos/seed/chef4/100/100',
-    imageUrl: 'https://picsum.photos/seed/egg4/400/300',
+    imageUrl: '/TELOR-CEPLOK-BUMBU-BALADO-IRIS.webp',
     eggsCount: 2
   },
   {
@@ -141,12 +141,12 @@ export const COMMUNITY_RECIPES: StaticRecipe[] = [
 4. Teknik Menggulung: Gulung telor secara perlahan dari satu sisi ke sisi lainnya menggunakan sumpit atau spatula. Geser gulungan ke salah satu ujung teflon.
 5. Layer Selanjutnya: Olesi kembali sisi kosong teflon dengan sedikit minyak. Tuang lagi sebagian adonan telor, pastikan adonan baru masuk ke bawah gulungan telor sebelumnya agar menyambung. Ulangi proses ini hingga adonan habis.
 6. Pemadatan: Setelah semua adonan tergulung, tekan-tekan lembut gulungan telor di pojok teflon untuk membentuk kotak yang rapi. Angkat, diamkan sebentar, lalu potong-potong dengan pisau tajam.`,
-    videoUrl: 'https://www.youtube.com/embed/S_8qK2y466M',
+    videoUrl: 'https://www.youtube.com/embed/dpwBu-VullY',
     cookTime: '15 menit',
     servings: '1 orang',
     chefName: 'Chef Spesialis Bento',
     chefAvatar: 'https://picsum.photos/seed/chef8/100/100',
-    imageUrl: 'https://picsum.photos/seed/egg8/400/300',
+    imageUrl: '/TELOR-GULUNG-JEPANG.webp',
     eggsCount: 2
   },
   {
@@ -160,12 +160,12 @@ export const COMMUNITY_RECIPES: StaticRecipe[] = [
 3. Integrasi Sarden: Tuangkan seluruh isi kaleng sarden ke dalam wajan. Gunakan sutil untuk membelah ikan sarden menjadi ukuran yang lebih kecil agar bumbu lebih meresap dan tercampur rata dengan telor.
 4. Proses Reduksi: Masak dengan api sedang hingga kuah sarden mendidih dan sedikit menyusut (reduksi). Hal ini akan memperkuat rasa saus sarden pada telor.
 5. Finishing: Koreksi rasa. Biasanya tidak perlu garam tambahan karena saus sarden sudah cukup asin. Sajikan selagi panas dengan nasi putih.`,
-    videoUrl: 'https://www.youtube.com/embed/6iW4J2-iUvE',
+    videoUrl: 'https://www.youtube.com/embed/yZucq_dfFZg',
     cookTime: '10 menit',
     servings: '2 orang',
     chefName: 'Chef Kuliner Praktis',
     chefAvatar: 'https://picsum.photos/seed/chef5/100/100',
-    imageUrl: 'https://picsum.photos/seed/egg5/400/300',
+    imageUrl: '/TUMIS-SARDEN-ORAK-ARIK-TELOR.webp',
     eggsCount: 2
   },
   {
@@ -179,12 +179,12 @@ export const COMMUNITY_RECIPES: StaticRecipe[] = [
 3. Teknik Menggoreng: Panaskan 1 sdm minyak di teflon menggunakan api sedang cenderung kecil. Tuangkan seluruh adonan, ratakan hingga membentuk lingkaran sempurna.
 4. Pematangan Perlahan: Masak perlahan hingga bagian bawah benar-benar garing dan berwarna cokelat gelap (namun tidak gosong). Penggunaan api kecil sangat penting agar bagian dalam yang tebal bisa matang sempurna.
 5. Finishing: Balik martabak mi dengan bantuan piring atau spatula lebar. Masak sisi sebaliknya hingga garing. Potong-potong seperti pizza dan sajikan dengan saus sambal.`,
-    videoUrl: 'https://www.youtube.com/embed/oG06m69I_hQ',
+    videoUrl: 'https://www.youtube.com/embed/AQLtfYh2YYo',
     cookTime: '10 menit',
     servings: '1 orang',
     chefName: 'Chef Kreasi Mi',
     chefAvatar: 'https://picsum.photos/seed/chef10/100/100',
-    imageUrl: 'https://picsum.photos/seed/egg10/400/300',
+    imageUrl: '/MARTABAK-MIE-TELOR-KORNET.webp',
     eggsCount: 2
   },
   {
@@ -198,12 +198,12 @@ export const COMMUNITY_RECIPES: StaticRecipe[] = [
 3. Simmering: Tuangkan air atau santan cair ke dalam bumbu. Aduk hingga rata dan biarkan mendidih.
 4. Proses Meresap: Masukkan telor rebus goreng ke dalam bumbu. Kecilkan api ke posisi paling rendah. Masak (simmer) sambil sesekali diaduk agar bumbu tidak gosong di dasar panci.
 5. Finishing: Masak terus hingga cairan menyusut dan bumbu rendang menjadi kental serta mengeluarkan minyak (dedak rendang). Pastikan seluruh permukaan telor terbalut bumbu dengan tebal. Sajikan.`,
-    videoUrl: 'https://www.youtube.com/embed/kYj6oN_fKTM',
+    videoUrl: 'https://www.youtube.com/embed/TsSsfJf3hno',
     cookTime: '20 menit',
     servings: '2 orang',
     chefName: 'Chef Masakan Padang',
     chefAvatar: 'https://picsum.photos/seed/chef6/100/100',
-    imageUrl: 'https://picsum.photos/seed/egg6/400/300',
+    imageUrl: '/TELOR-REBUS-GORENG-BUMBU-RENDANG.webp',
     eggsCount: 4
   }
 ];

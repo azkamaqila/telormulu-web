@@ -1,4 +1,3 @@
-
 "use client";
 
 import { useState } from "react";
@@ -16,6 +15,25 @@ import { useToast } from "@/hooks/use-toast";
 import Image from "next/image";
 
 type PageState = "home" | "masak_sendiri" | "detail_menu";
+
+// --- PERBAIKAN 1: Konstanta Array Dikeluarkan dari Komponen ---
+// Mengurangi beban render memori website secara drastis
+const MAIN_INGREDIENTS = [
+  { name: "Kecap", emoji: "🍾" },
+  { name: "Minyak Goreng", emoji: "🍶" },
+  { name: "Garam", emoji: "🧂" },
+  { name: "Cabai", emoji: "🌶️" },
+  { name: "Mentega", emoji: "🧈" }
+];
+
+const KITCHEN_TOOLS = [
+  { name: "Teflon", emoji: "🍳" },
+  { name: "Rice Cooker", emoji: "🍚" },
+  { name: "Wajan", emoji: "🥘" },
+  { name: "Air Fryer", emoji: "🌬️" },
+  { name: "Panci", emoji: "🍲" },
+  { name: "Microwave", emoji: "⏲️" }
+];
 
 export default function TelorMuluApp() {
   const [page, setPage] = useState<PageState>("home");
@@ -38,6 +56,17 @@ export default function TelorMuluApp() {
   };
 
   const handleManualCook = async () => {
+    // --- PERBAIKAN 2: Validasi Input ---
+    // Mencegah API terpanggil kosong jika tombol langsung diklik
+    if (mainIngredients.length === 0 && !additionalIngredients.trim()) {
+      toast({
+        variant: "destructive",
+        title: "Eits, tunggu dulu!",
+        description: "Pilih minimal satu bahan dulu, Bro!",
+      });
+      return;
+    }
+
     const sultanWords = [
       "wagyu", "caviar", "truffle", "lobster", "foie gras", 
       "saffron", "abalone", "king crab", "matsutake", 
@@ -64,13 +93,20 @@ export default function TelorMuluApp() {
       });
       setSelectedRecipe(result);
       setPage("detail_menu");
-    } catch (error: any) {
+
+    // --- PERBAIKAN 3: TypeScript strict check & Error Handling ---
+    } catch (error: unknown) {
+      const isNetworkError = error instanceof TypeError && error.message.includes('fetch');
+      const message = error instanceof Error ? error.message : "Unknown error";
+      console.error("AI Error:", message);
+      
       toast({
         variant: "destructive",
-        title: "Waduh, Chef AI lagi mogok!",
-        description: "Kayaknya internetnya lagi bapuk atau servernya lagi puyeng. Coba lagi ya!",
+        title: "Waduh, ada masalah nih!",
+        description: isNetworkError
+          ? "Koneksi internet kamu kayaknya bermasalah. Cek dulu ya!"
+          : "Server AI lagi sibuk. Tunggu beberapa detik lalu coba lagi.",
       });
-      console.error("AI Error:", error);
     } finally {
       setIsLoading(false);
     }
@@ -89,7 +125,7 @@ export default function TelorMuluApp() {
           <div className="flex flex-col">
             <h1 className="text-4xl md:text-5xl font-black text-primary tracking-tighter leading-[0.8] uppercase flex flex-col">
               <span>TELOR</span>
-              <span>MULU!</span>
+              <span className="italic">MULU!</span>
             </h1>
           </div>
         </div>
@@ -244,13 +280,7 @@ export default function TelorMuluApp() {
           <div className="space-y-4">
             <Label className="text-lg font-bold">Ada Bahan Tambahan?</Label>
             <div className="grid grid-cols-2 sm:grid-cols-3 gap-4">
-              {[
-                { name: "Kecap", emoji: "🍾" },
-                { name: "Minyak Goreng", emoji: "🍶" },
-                { name: "Garam", emoji: "🧂" },
-                { name: "Cabai", emoji: "🌶️" },
-                { name: "Mentega", emoji: "🧈" }
-              ].map((item) => (
+              {MAIN_INGREDIENTS.map((item) => (
                 <div key={item.name} className="flex items-center space-x-2 bg-white border border-primary/20 p-3 rounded-lg hover:bg-secondary/5 transition-colors cursor-pointer" onClick={() => toggleMainIngredient(item.name)}>
                   <Checkbox 
                     id={item.name} 
@@ -285,14 +315,7 @@ export default function TelorMuluApp() {
           <div className="space-y-4">
             <Label className="text-lg font-bold">Masak Pake Apa?</Label>
             <RadioGroup value={cookingTool} onValueChange={setCookingTool} className="grid grid-cols-2 sm:grid-cols-3 gap-4">
-              {[
-                { name: "Teflon", emoji: "🍳" },
-                { name: "Rice Cooker", emoji: "🍚" },
-                { name: "Wajan", emoji: "🥘" },
-                { name: "Air Fryer", emoji: "🌬️" },
-                { name: "Panci", emoji: "🍲" },
-                { name: "Microwave", emoji: "⏲️" }
-              ].map((tool) => (
+              {KITCHEN_TOOLS.map((tool) => (
                 <div key={tool.name} className={`flex flex-col items-center justify-center p-3 border-2 rounded-xl cursor-pointer transition-all ${cookingTool === tool.name ? 'bg-secondary border-primary shadow-md scale-105' : 'bg-white border-primary/20 hover:border-primary/50'}`} onClick={() => setCookingTool(tool.name)}>
                   <RadioGroupItem value={tool.name} id={tool.name} className="sr-only" />
                   <span className="text-2xl mb-1">{tool.emoji}</span>
@@ -429,8 +452,8 @@ export default function TelorMuluApp() {
                 width="100%" 
                 height="100%" 
                 src={videoUrl} 
-                title="YouTube video player" 
-                frameBorder="0" 
+                title="YouTube video player"
+                className="border-0"
                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
                 allowFullScreen
               ></iframe>

@@ -70,6 +70,9 @@ const generateEggRecipeFlow = ai.defineFlow(
   },
   async input => {
     const {output} = await prompt(input);
+    if (!output){
+      throw new Error("Chef nya lagi error bray.");
+    }
     return output!;
   },
 );
